@@ -40,6 +40,12 @@ body {
     border: none;
 }
 
+.btn-outline-0{
+    &:focus{
+        outline: 0;
+    }
+}
+
 .back-history-arrow:focus {
     outline: 0;
 }
