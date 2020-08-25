@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IBP Gateway</title>
+    <!-- Fontawesome 5.13.x -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css" />
+    <!-- bootstrap 4.3.1 css -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="./css/style.css">
+
+    <style>
+    </style>
+</head>
+
+<body>
+
+    <div class="pg-wrapper">
+        <div class="content-wrapper">
+            <div class="card mx-3 mt-5 custom-bg-danger">
+                <div class="card-header border-0 text-white">
+                    <div class="flex-justify-between">
+                        <span>
+                            <button class="back-history-arrow text-white" onclick="goBack()"><i
+                                    class="fas fa-arrow-left"></i></button>
+                        </span>
+
+                        <span>
+                            <div class="user-email">
+                                Damilolaadeleke@gmail.com
+                            </div>
+                            <div class="font-size-m">
+                                <span class="text-capitalize">pay</span>&nbsp;<span>N</span><span>3,250.00</span>
+                            </div>
+                        </span>
+                    </div>
+                </div>
+                <div class="card-body bottom-container bg-white">
+                    <div class="cut_separator">
+                        <span>Select payment option</span>
+                    </div>
+                    <ul class="nav nav-pills mb-3 tab-nav" id="pills-tab" role="tablist">
+                        <li class="nav-item">
+                            <a class="nav-link tab-link active text-center shadow m-2" id="pills-card-tab"
+                                data-toggle="pill" href="#pills-card" role="tab" aria-controls="pills-card"
+                                aria-selected="true">
+                                <img src="./assets/images/card.png" class="tab-demog-img" alt="">
+                                <div class="tab-label">card</div>
+                            </a>
+                            <div class="checked-img-wrapper text-center">
+                                <img src="./assets/images/tab-checked.png" class="checked-img" alt="">
+                            </div>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link tab-link text-center shadow m-2" id="pills-ussd-tab" data-toggle="pill"
+                                href="#pills-ussd" role="tab" aria-controls="pills-ussd" aria-selected="false">
+                                <img src="./assets/images/card.png" class="tab-demog-img" alt="">
+                                <div class="tab-label">ussd</div>
+                            </a>
+                            <div class="checked-img-wrapper text-center">
+                                <img src="./assets/images/tab-checked.png" class="checked-img" alt="">
+                            </div>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link tab-link text-center shadow m-2" id="pills-direct_debit-tab"
+                                data-toggle="pill" href="#pills-direct_debit" role="tab"
+                                aria-controls="pills-direct_debit" aria-selected="false"><img
+                                    src="./assets/images/card.png" class="tab-demog-img" alt="">
+                                <div class="tab-label">direct_debit</div>
+                            </a>
+                            <div class="checked-img-wrapper text-center">
+                                <img src="./assets/images/tab-checked.png" class="checked-img" alt="">
+                            </div>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link tab-link text-center shadow m-2" id="pills-qr_code-tab"
+                                data-toggle="pill" href="#pills-qr_code" role="tab" aria-controls="pills-qr_code"
+                                aria-selected="false"><img src="./assets/images/card.png" class="tab-demog-img" alt="">
+                                <div class="tab-label">qr_code</div>
+                            </a>
+                            <div class="checked-img-wrapper text-center">
+                                <img src="./assets/images/tab-checked.png" class="checked-img" alt="">
+                            </div>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link tab-link text-center shadow m-2" id="pills-pay_attitude-tab"
+                                data-toggle="pill" href="#pills-pay_attitude" role="tab"
+                                aria-controls="pills-pay_attitude" aria-selected="false"><img
+                                    src="./assets/images/card.png" class="tab-demog-img" alt="">
+                                <div class="tab-label">pay_attitude</div>
+                            </a>
+                            <div class="checked-img-wrapper text-center">
+                                <img src="./assets/images/tab-checked.png" class="checked-img" alt="">
+                            </div>
+                        </li>
+                    </ul>
+                    <div class="tab-content" id="pills-tabContent">
+
+                        <!-- Card content -->
+                        <div class="tab-pane fade show active" id="pills-card" role="tabpanel"
+                            aria-labelledby="pills-card-tab">
+                            <div class="cut_separator">
+                                <span>Enter your Card details</span>
+                            </div>
+                            <form action="#" class="mt-3">
+                                <div class="row">
+                                    <div class="col-12 col-md-6">
+                                        <div>
+                                            <label for="cardName" class="px-2">Card Name</label>
+                                            <input type="text" id="cardName">
+                                        </div>
+                                    </div>
+                                    <div class="col-12 col-md-6">
+                                        <div>
+                                            <input type="number" id="cardNumber" placeholder="Card Number">
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-12 col-md-6">
+                                        <div>
+                                            <label for="cardName" class="px-2">Valid Till</label>
+                                            <input type="date" id="cardName">
+                                        </div>
+                                    </div>
+                                    <div class="col-12 col-md-6">
+                                        <div>
+                                            <input type="text" id="cvv" placeholder="CVV" maxlength="3">
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col text-center">
+                                        <button class="submit-btn rounded py-2" disabled>
+                                            <span
+                                                class="text-capitalize">pay</span>&nbsp;<span>N</span><span>3,250.00</span>
+                                        </button>
+                                    </div>
+                                </div>
+                            </form>
+
+                        </div>
+                            <!-- USSD content -->
+                        <div class="tab-pane fade" id="pills-ussd" role="tabpanel" aria-labelledby="pills-ussd-tab">
+                            <div class="cut_separator">
+                                <span>Select your bank to pay with USSD</span>
+                            </div>
+                            <form action="#" class="mt-3 ussd_form">
+                                <!--  -->
+                                <div class="row">
+                                    <div class="col-12 col-md-6">
+                                        <div class="form-input-wrapper valid mt-1 mb-2 px-2">
+                                            <!-- this input is a read only input field -->
+                                            <!-- <input type="text" name="bank-name" class="bank-name m-0" id="" placeholder="Select Bank" readonly>
+                                            <select name="bank-short-code" class="bank-short-code" id="">
+                                                <option value="">*919*</option>
+                                                <option value="">*737*</option>
+                                            </select> -->
+                                            <select name="" id="" class="bank-selector w-100">
+                                                <option value="uba">
+                                                    <div>
+                                                        <div>United Bank for Africa (UBA)</div>
+                                                        <div class="bg-light rounded">
+                                                            *919*</div>
+                                                    </div>
+                                                </option>
+                                                <option value="uba">
+                                                    <div>
+                                                        <div>Guaranteed trust Bank (GTB)</div>
+                                                        <div class="bg-light rounded">
+                                                            *737*</div>
+                                                    </div>
+                                                </option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!--  -->
+                                <div class="cut_separator mb-1">
+                                    <span>Dial this code on your mobile device</span>
+                                </div>
+                                <div class="my-3" style=" display: flex; justify-content: space-between; align-items: center;">
+                                    <div>
+                                        <input type="text" name="bank-code" id="bankCode" value="*919*00*3250#" class="bank-code p-0 m-0" readonly>
+                                    </div>
+                                    <button onclick="myFunction()" class="clipboard-btn">Copy to clipboard</button>
+                                </div>
+                                <div class="row">
+                                    <div class="col text-center">
+                                        <button class="submit-btn rounded py-2" disabled>
+                                            Confirm Payment
+                                        </button>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+
+                        <!-- Direct Debit content -->
+                        <div class="tab-pane fade" id="pills-direct_debit" role="tabpanel"
+                            aria-labelledby="pills-direct_debit-tab">                        
+                            <div class="cut_separator">
+                                <span>Enter your Card details</span>
+                            </div>
+                            <form action="#" class="mt-3">
+                                <div class="row">
+                                    <div class="col-12 col-md-6">
+                                        <div>
+                                            <input type="text" id="acctName" placeholder="Account Number">
+                                        </div>
+                                    </div>
+                                    <div class="col-12 col-md-6">
+                                        <div>
+                                            <input type="number" id="bvnNumber" placeholder="BVN Number">
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-12 col-md-6">
+                                        <div>
+                                            <label for="cardName" class="px-2">Date of Birth</label>
+                                            <input type="date" id="cardName">
+                                        </div>
+                                    </div>
+                                    <div class="col-12 col-md-6">
+                                        <div>
+                                            <input type="text" id="phoneNumber" placeholder="Phone Number">
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col text-center">
+                                        <button class="submit-btn rounded py-2" disabled>
+                                            <span
+                                                class="text-capitalize">pay</span>&nbsp;<span>N</span><span>3,250.00</span>
+                                        </button>
+                                    </div>
+                                </div>
+                            </form>   
+                        </div>
+
+                        <!-- QR code content -->
+                        <div class="tab-pane fade" id="pills-qr_code" role="tabpanel"
+                            aria-labelledby="pills-qr_code-tab">
+                            <div class="cut_separator">
+                                <span>Scan the QR code with your mobile phone</span>
+                            </div>
+                        </div>
+                        <div class="tab-pane fade" id="pills-pay_attitude" role="tabpanel"
+                            aria-labelledby="pills-pay_attitude-tab">                                                
+                            <div class="cut_separator">
+                                <span>Enter your Card details</span>
+                            </div>    
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="text-center m-2">Instant Bills Pay powered by UBA</div>
+        </div>
+    </div>
+
+
+    <!-- bootstrap 4.3.1 js -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+        integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+        crossorigin="anonymous"></script>
+    <!-- custom js -->
+    <script src="./js/main.js"></script>
+</body>
+
+</html>
