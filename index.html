@@ -192,7 +192,7 @@
                                 </div>
                                 <div class="row">
                                     <div class="col text-center">
-                                        <button class="submit-btn rounded py-2" disabled>
+                                        <button class="submit-btn rounded py-2">
                                             Confirm Payment
                                         </button>
                                     </div>
@@ -234,7 +234,7 @@
                                 </div>
                                 <div class="row">
                                     <div class="col text-center">
-                                        <button class="submit-btn rounded py-2" disabled>
+                                        <button class="submit-btn rounded py-2">
                                             <span
                                                 class="text-capitalize">pay</span>&nbsp;<span>N</span><span>3,250.00</span>
                                         </button>
@@ -256,19 +256,44 @@
                                             Code will expire in
                                         </div>
                                         <div class="qr-label-timer">
-                                            <span>04:80</span>&nbsp;<span>mins</span>
+                                            <span id="min">04</span>:<span id="sec">80</span>&nbsp;<span>mins</span>
                                         </div>
                                     </div>
-                                    <div><img src="./assets/images/qr-code-image.png" alt="">
+                                    <div class="qr-img-wrapper"><img src="./assets/images/qr-code-image.png" alt="">
                                     </div>
                                 </div>
                             </section>
                         </div>
+
+                        <!-- Payment attitude content -->
                         <div class="tab-pane fade" id="pills-pay_attitude" role="tabpanel"
                             aria-labelledby="pills-pay_attitude-tab">
                             <div class="cut_separator">
-                                <span>Enter your Card details</span>
+                                <span>Enter your Phone Number</span>
                             </div>
+                            <form action="#" class="mt-3">
+                                <section>
+                                    <div class="row">
+                                        <div class="col-12 col-md-6">
+                                            <div class="input-wrapper filled">
+                                                <input type="text" id="cardNumber"
+                                                    placeholder="Enter your Phone Number">
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col text-center">
+                                            <button class="submit-btn rounded py-2">
+                                                <span
+                                                    class="text-capitalize">pay</span>&nbsp;<span>N</span><span>3,250.00</span>
+                                            </button>
+                                        </div>
+                                    </div>
+                                </section>
+                                <section>
+
+                                </section>
+                            </form>
                         </div>
                     </div>
                 </div>
