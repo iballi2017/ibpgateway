@@ -67,6 +67,33 @@ body {
     overflow-x: scroll;
 }
 
+// this gives the red checked icon on input fields
+.filled::after {
+    content: "\f00c";
+    font-family: "Font Awesome 5 Free";
+    font-weight: 900;
+    color: $secondary_color;
+    display: block;
+    position: absolute;
+    top: 0;
+    right: -3px;
+}
+
+.qr-wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    .qr-label-timer {
+        font-size: 1.8rem;
+        font-weight: 500;
+    }
+    .qr-img-wrapper{
+        img{
+            width: 100%;
+        }
+    }
+}
+
 .nav-pills {
     .tab-link.active {
         background-color: $icons_lines_color;
@@ -86,24 +113,24 @@ body {
     border-radius: 25px 25px 0 0;
 }
 .cut_separator {
-    border-bottom: .7px solid $icons_lines_color;
+    border-bottom: 0.7px solid $icons_lines_color;
     position: relative;
     margin-top: 3em;
     margin-bottom: 1.5em;
 }
 
-.bank-code{
+.bank-code {
     font-size: 1.3rem;
     border: none;
     font-weight: 500;
 }
-.clipboard-btn{
+.clipboard-btn {
     border: none;
     background-color: $icons_lines_color;
-    font-size: .6rem;
+    font-size: 0.6rem;
     display: inline-flex;
     border-radius: 3px;
-    padding: .7em;
+    padding: 0.7em;
 }
 
 .cut_separator > span {
@@ -161,9 +188,9 @@ form {
         //         outline: 0;
         //     }
         // }
-        .bank-selector{
+        .bank-selector {
             border: none;
-            &:focus{
+            &:focus {
                 outline: 0;
             }
         }

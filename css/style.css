@@ -47,6 +47,26 @@ body {
   flex-wrap: nowrap;
   overflow-x: scroll; }
 
+.filled::after {
+  content: "\f00c";
+  font-family: "Font Awesome 5 Free";
+  font-weight: 900;
+  color: #d71920;
+  display: block;
+  position: absolute;
+  top: 0;
+  right: -3px; }
+
+.qr-wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end; }
+  .qr-wrapper .qr-label-timer {
+    font-size: 1.8rem;
+    font-weight: 500; }
+  .qr-wrapper .qr-img-wrapper img {
+    width: 100%; }
+
 .nav-pills .tab-link.active {
   background-color: #adb0b4; }
   .nav-pills .tab-link.active + .checked-img-wrapper .checked-img {
@@ -73,10 +93,10 @@ body {
 .clipboard-btn {
   border: none;
   background-color: #adb0b4;
-  font-size: .6rem;
+  font-size: 0.6rem;
   display: inline-flex;
   border-radius: 3px;
-  padding: .7em; }
+  padding: 0.7em; }
 
 .cut_separator > span {
   position: absolute;
