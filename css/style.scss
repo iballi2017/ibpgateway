@@ -18,6 +18,8 @@ body {
     margin: 0;
     padding: 0;
     color: $text_color;
+    background-image: url(../assets/images/gateway_background_image.png);
+    background-size: cover;
 }
 
 .shadow {
@@ -129,6 +131,9 @@ body {
     position: relative;
     margin-top: 3em;
     margin-bottom: 1.5em;
+    >span{
+        font-weight: 600;
+    }
 }
 
 .bank-code {

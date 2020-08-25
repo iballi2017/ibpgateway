@@ -123,12 +123,12 @@
                                     <div class="col-12 col-md-6">
                                         <div class="input-wrapper filled">
                                             <label for="cardName" class="px-2">Valid Till</label>
-                                            <input type="date" id="cardName">
+                                            <input type="number" id="cardName" placeholder="00/00">
                                         </div>
                                     </div>
                                     <div class="col-12 col-md-6">
                                         <div class="input-wrapper filled">
-                                            <input type="text" id="cvv" placeholder="CVV" maxlength="3">
+                                            <input type="text" id="cvv" placeholder="CVV" maxlength="3" pattern="[0-9]{7}">
                                         </div>
                                     </div>
                                 </div>
@@ -223,7 +223,7 @@
                                     <div class="col-12 col-md-6">
                                         <div class="input-wrapper filled">
                                             <label for="cardName" class="px-2">Date of Birth</label>
-                                            <input type="date" id="cardName">
+                                            <input type="text" id="cardName" placeholder="DD/MM/YYYY">
                                         </div>
                                     </div>
                                     <div class="col-12 col-md-6">
@@ -294,13 +294,13 @@
                             <section class="transaction-pin-area">
                                 <h6 class="text-center mt-4">Enter your transaction PIN</h6>
 
-                                <form>
+                                <form name="otpForm">
                                     <div class="text-center">
                                         <div class="pin-input-wrapper">
-                                            <input type="text" pattern="[0-9]{7}" maxlength="1">
-                                            <input type="text" pattern="[0-9]{7}" maxlength="1">
-                                            <input type="text" pattern="[0-9]{7}" maxlength="1">
-                                            <input type="text" pattern="[0-9]{7}" maxlength="1">
+                                            <input type="text" pattern="[0-9]{7}" maxlength="1" class="otp-digit">
+                                            <input type="text" pattern="[0-9]{7}" maxlength="1" class="otp-digit">
+                                            <input type="text" pattern="[0-9]{7}" maxlength="1" class="otp-digit">
+                                            <input type="text" pattern="[0-9]{7}" maxlength="1" class="otp-digit">
                                         </div>
 
                                         <p class="my-4"><a href="#" class="custom-text-danger fontweight-500 otp-link">Use OTP
@@ -321,7 +321,8 @@
         </div>
     </div>
 
-
+<!-- jquery cdn -->
+<script src="https://code.jquery.com/jquery-3.5.0.min.js"></script>
     <!-- bootstrap 4.3.1 js -->
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
         integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
