@@ -20,6 +20,9 @@ body {
 .custom-bg-danger {
   background-color: #d71920; }
 
+.custom-text-danger {
+  color: #d71920; }
+
 .back-history-arrow {
   background-color: unset;
   border: none; }
@@ -37,6 +40,9 @@ body {
 
 .font-size-m {
   font-size: 1.5rem; }
+
+.fontweight-500 {
+  font-weight: 500; }
 
 .checked-img {
   width: 15px;
@@ -115,9 +121,15 @@ form input {
   display: block;
   width: 100%;
   margin-bottom: 1.9em;
-  padding: 0.3em 0.6em; }
+  padding: 0.3em 0.6em;
+  /* Chrome, Safari, Edge, Opera */
+  /* Firefox */ }
   form input:focus {
     outline: 0; }
+  form input[type="number"]::-webkit-outer-spin-button, form input[type="number"]::-webkit-inner-spin-button {
+    -webkit-appearance: none; }
+  form input[type="number"] {
+    -moz-appearance: textfield; }
 form .submit-btn {
   background-color: #d71920;
   border: none;
@@ -139,6 +151,23 @@ form .submit-btn {
       outline: 0; }
 .ussd_form .form-input-wrapper.valid {
   border: 1px solid #d71920; }
+
+.transaction-pin-area .pin-input-wrapper {
+  display: flex;
+  width: 30%;
+  margin: 0 auto; }
+  .transaction-pin-area .pin-input-wrapper input {
+    margin: 0;
+    border-top: none;
+    border-right: none;
+    border-left: none;
+    text-align: center; }
+    .transaction-pin-area .pin-input-wrapper input + input {
+      margin-left: 3px; }
+.transaction-pin-area .otp-link {
+  text-decoration: none; }
+  .transaction-pin-area .otp-link:hover {
+    color: #585858; }
 
 @media (min-width: 700px) {
   .nav.tab-nav {

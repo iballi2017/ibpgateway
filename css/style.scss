@@ -32,7 +32,9 @@ body {
 .custom-bg-danger {
     background-color: $secondary_color;
 }
-
+.custom-text-danger {
+    color: $secondary_color;
+}
 .back-history-arrow {
     background-color: unset;
     border: none;
@@ -54,6 +56,10 @@ body {
 
 .font-size-m {
     font-size: 1.5rem;
+}
+
+.fontweight-500 {
+    font-weight: 500;
 }
 
 .checked-img {
@@ -87,8 +93,8 @@ body {
         font-size: 1.8rem;
         font-weight: 500;
     }
-    .qr-img-wrapper{
-        img{
+    .qr-img-wrapper {
+        img {
             width: 100%;
         }
     }
@@ -158,6 +164,18 @@ form {
         &:focus {
             outline: 0;
         }
+
+        // number inputs
+        /* Chrome, Safari, Edge, Opera */
+        &[type="number"]::-webkit-outer-spin-button,
+        &[type="number"]::-webkit-inner-spin-button {
+            -webkit-appearance: none;
+        }
+
+        /* Firefox */
+        &[type="number"] {
+            -moz-appearance: textfield;
+        }
     }
 
     .submit-btn {
@@ -199,6 +217,33 @@ form {
         border: 1px solid $secondary_color;
     }
 }
+
+.pay-attitude-form {
+}
+.transaction-pin-area {
+    .pin-input-wrapper {
+        display: flex;
+        width: 30%;
+        margin: 0 auto;
+        input {
+            margin: 0;
+            border-top: none;
+            border-right: none;
+            border-left: none;
+            text-align: center;
+            + input {
+                margin-left: 3px;
+            }
+        }
+    }
+     .otp-link {
+            text-decoration: none;
+            &:hover {
+                color: $text_color;
+            }
+        }
+}
+
 @media (min-width: 700px) {
     .nav.tab-nav {
         flex-wrap: nowrap;
