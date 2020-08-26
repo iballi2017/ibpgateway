@@ -10,7 +10,8 @@ body {
   padding: 0;
   color: #585858;
   background-image: url(../assets/images/gateway_background_image.png);
-  background-size: cover; }
+  background-size: cover;
+  background-repeat: no-repeat; }
 
 .shadow {
   box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.1) !important; }
@@ -78,10 +79,18 @@ body {
   .qr-wrapper .qr-img-wrapper img {
     width: 100%; }
 
+.nav-pills .tab-link .img-1 {
+  display: block; }
+.nav-pills .tab-link .img-2 {
+  display: none; }
 .nav-pills .tab-link.active {
-  background-color: #adb0b4; }
+  background-color: #ffffff; }
   .nav-pills .tab-link.active + .checked-img-wrapper .checked-img {
     opacity: 1; }
+  .nav-pills .tab-link.active .img-1 {
+    display: none; }
+  .nav-pills .tab-link.active .img-2 {
+    display: block; }
 .nav-pills .ab-demog-img {
   width: 40%; }
 .nav-pills .tab-label {

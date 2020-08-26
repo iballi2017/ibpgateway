@@ -20,6 +20,7 @@ body {
     color: $text_color;
     background-image: url(../assets/images/gateway_background_image.png);
     background-size: cover;
+    background-repeat: no-repeat;
 }
 
 .shadow {
@@ -42,8 +43,8 @@ body {
     border: none;
 }
 
-.btn-outline-0{
-    &:focus{
+.btn-outline-0 {
+    &:focus {
         outline: 0;
     }
 }
@@ -109,10 +110,24 @@ body {
 }
 
 .nav-pills {
-    .tab-link.active {
-        background-color: $icons_lines_color;
-        + .checked-img-wrapper .checked-img {
-            opacity: 1;
+    .tab-link {
+            .img-1{
+                display: block;
+            }
+            .img-2{
+                display: none;
+            }
+        &.active {
+            background-color: $white_color;
+            + .checked-img-wrapper .checked-img {
+                opacity: 1;
+            }
+            .img-1{
+                display: none;
+            }
+            .img-2{
+                display: block;
+            }
         }
     }
     .ab-demog-img {
@@ -131,7 +146,7 @@ body {
     position: relative;
     margin-top: 3em;
     margin-bottom: 1.5em;
-    >span{
+    > span {
         font-weight: 600;
     }
 }
@@ -247,12 +262,12 @@ form {
             }
         }
     }
-     .otp-link {
-            text-decoration: none;
-            &:hover {
-                color: $text_color;
-            }
+    .otp-link {
+        text-decoration: none;
+        &:hover {
+            color: $text_color;
         }
+    }
 }
 
 @media (min-width: 700px) {

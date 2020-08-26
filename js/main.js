@@ -17,6 +17,9 @@ $(document).ready(function () {
   //     alert('Tab pressed');
   //   }
   // });
+
+
+
 });
 
 
@@ -46,8 +49,6 @@ function myFunction() {
 }
 
 
-var otpDigit = document.querySelectorAll(".otp-digit")
-console.log(otpDigit)
-
-
+// var otpDigit = document.querySelectorAll(".otp-digit")
+// console.log(otpDigit)
 
