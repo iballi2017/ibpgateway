@@ -3,32 +3,11 @@
 $(document).ready(function () {
   // alert("hello world!");
 
-
-  // console.log($(".otp-digit"));
-  // var otpDigit = $(".otp-digit");
-  // otpDigit.forEach(element => {
-  //   console.log(element)
-  // });
-
-  // $('body').keydown(function (e) {
-  //   console.log('keyup called');
-  //   var code = e.keyCode || e.which;
-  //   if (code == '9') {
-  //     alert('Tab pressed');
-  //   }
-  // });
-
-
-
 });
 
 
 
-
-
-
 // Vanilla Javascript block
-
 // back history
 function goBack() {
   window.history.back();
@@ -47,8 +26,4 @@ function myFunction() {
   /* Alert the copied text */
   alert("Copied the text: " + copyText.value);
 }
-
-
-// var otpDigit = document.querySelectorAll(".otp-digit")
-// console.log(otpDigit)
 

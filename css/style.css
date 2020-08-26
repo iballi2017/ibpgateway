@@ -79,6 +79,10 @@ body {
   .qr-wrapper .qr-img-wrapper img {
     width: 100%; }
 
+.img-1.hide, .img-2.hide {
+  position: absolute;
+  opacity: 0; }
+
 .nav-pills .tab-link .img-1 {
   display: block; }
 .nav-pills .tab-link .img-2 {
