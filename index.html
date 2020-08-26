@@ -22,7 +22,7 @@
                 <div class="card-header border-0 text-white">
                     <div class="flex-justify-between">
                         <span>
-                            <button class="back-history-arrow text-white" onclick="goBack()"><i
+                            <button class="back-history-arrow text-white" onclick="goBack(); return false"><i
                                     class="fas fa-arrow-left"></i></button>
                         </span>
 
@@ -193,7 +193,7 @@
                                         <input type="text" name="bank-code" id="bankCode" value="*919*00*3250#"
                                             class="bank-code p-0 m-0" readonly>
                                     </div>
-                                    <button onclick="myFunction()" class="clipboard-btn btn-outline-0">Copy to
+                                    <button onclick="myFunction(); return false" class="clipboard-btn btn-outline-0">Copy to
                                         clipboard</button>
                                 </div>
                                 <div class="row">
