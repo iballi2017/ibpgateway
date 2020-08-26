@@ -317,17 +317,17 @@
                                 <form name="otpForm">
                                     <div class="text-center">
                                         <div class="pin-input-wrapper">
-                                            <input type="text" pattern="[0-9]{7}" maxlength="1" class="otp-digit">
-                                            <input type="text" pattern="[0-9]{7}" maxlength="1" class="otp-digit">
-                                            <input type="text" pattern="[0-9]{7}" maxlength="1" class="otp-digit">
-                                            <input type="text" pattern="[0-9]{7}" maxlength="1" class="otp-digit">
+                                            <input type="text" pattern="[0-9]{1}" maxlength="1" class="otp-digit">
+                                            <input type="text" pattern="[0-9]{1}" maxlength="1" class="otp-digit">
+                                            <input type="text" pattern="[0-9]{1}" maxlength="1" class="otp-digit">
+                                            <input type="text" pattern="[0-9]{1}" maxlength="1" class="otp-digit">
                                         </div>
 
                                         <p class="my-4"><a href="#"
                                                 class="custom-text-danger fontweight-500 otp-link">Use OTP
                                                 instead?</a></p>
 
-                                        <button class="submit-btn rounded py-2 btn-outline-0">
+                                        <button type="button" class="submit-btn rounded py-2 btn-outline-0" onclick="return false">
                                             Confirm
                                         </button>
                                     </div>
