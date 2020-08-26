@@ -86,27 +86,17 @@ body {
   visibility: hidden;
   transition: opacity 1s, visibility 1s; }
 .nav-pills .tab-link .img-1 {
-  position: relative;
-  opacity: 1;
-  visibility: visible; }
+  display: block; }
 .nav-pills .tab-link .img-2 {
-  position: absolute;
-  opacity: 0;
-  visibility: hidden;
-  transition: opacity 250ms, visibility 250ms; }
+  display: none; }
 .nav-pills .tab-link.active {
   background-color: #ffffff; }
   .nav-pills .tab-link.active + .checked-img-wrapper .checked-img {
     opacity: 1; }
   .nav-pills .tab-link.active .img-1 {
-    position: absolute;
-    opacity: 0;
-    visibility: hidden;
-    transition: opacity 250ms, visibility 250ms; }
+    display: none; }
   .nav-pills .tab-link.active .img-2 {
-    position: relative;
-    opacity: 1;
-    visibility: visible; }
+    display: block; }
 .nav-pills .ab-demog-img {
   width: 40%; }
 .nav-pills .tab-label {

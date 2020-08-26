@@ -120,23 +120,12 @@ body {
     }
     .tab-link {
         .img-1 {
-                // ###### OPTION 1: use display to hide and show without animation
-                // display: block;
-                // 
-                // ###### OPTION 2: use opacity and visibility below for animation
-            position: relative;
-            opacity: 1;
-            visibility: visible;
+               display: block;
+              
         }
         .img-2 {
-                // ###### OPTION 1: use display to hide and show without animation
-                // display: none;
-                // 
-                // ###### OPTION 2: use opacity and visibility below for animation
-            position: absolute;
-            opacity: 0;
-            visibility: hidden;
-            transition: opacity 250ms, visibility 250ms;
+            display: none;
+                
         }
         &.active {
             background-color: $white_color;
@@ -144,23 +133,10 @@ body {
                 opacity: 1;
             }
             .img-1 {
-                // ###### OPTION 1: use display to hide and show without animation
-                // display: none;
-                // 
-                // ###### OPTION 2: use opacity and visibility below for animation
-                position: absolute;
-                opacity: 0;
-                visibility: hidden;
-                transition: opacity 250ms, visibility 250ms;
+               display: none;
             }
             .img-2 {
-                // ###### OPTION 1: use display to hide and show without animation
-                // display: block;
-                // 
-                // ###### OPTION 2: use opacity and visibility below for animation
-                position: relative;
-                opacity: 1;
-                visibility: visible;
+                display: block;
             }
         }
     }
