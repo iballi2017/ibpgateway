@@ -23,6 +23,12 @@ body {
     background-repeat: no-repeat;
 }
 
+.flex-juspb-alc {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
 .shadow {
     box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.1) !important;
 }
@@ -110,22 +116,12 @@ body {
 }
 
 .nav-pills {
-    .img-1.hide,
-    .img-2.hide {
-        position: absolute;
-        opacity: 0;
-        visibility: hidden;
-        transition: opacity 1s, visibility 1s;
-        // transition: all 500ms ease-in-out;
-    }
     .tab-link {
         .img-1 {
-               display: block;
-              
+            display: block;
         }
         .img-2 {
             display: none;
-                
         }
         &.active {
             background-color: $white_color;
@@ -133,7 +129,7 @@ body {
                 opacity: 1;
             }
             .img-1 {
-               display: none;
+                display: none;
             }
             .img-2 {
                 display: block;
@@ -246,7 +242,9 @@ form {
 }
 
 .transaction-pin-area {
-    &.hide{display: none;}
+    &.hide {
+        display: none;
+    }
     .pin-input-wrapper {
         display: flex;
         width: 30%;

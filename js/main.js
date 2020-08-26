@@ -50,7 +50,15 @@ $(document).ready(function () {
     }
   })
 
-  // $(".transaction-pin-area")
+
+  $(".pay-attitude-phone").keyup(function () {
+    if ($(this).val()) {
+      $(".transaction-pin-area").removeClass("hide")
+    } else {
+      $(".transaction-pin-area").addClass("hide")
+    }
+  })
+
 });
 
 

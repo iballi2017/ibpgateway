@@ -13,6 +13,11 @@ body {
   background-size: 100% 100%;
   background-repeat: no-repeat; }
 
+.flex-juspb-alc {
+  display: flex;
+  justify-content: space-between;
+  align-items: center; }
+
 .shadow {
   box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.1) !important; }
 
@@ -79,12 +84,6 @@ body {
   .qr-wrapper .qr-img-wrapper img {
     width: 100%; }
 
-.nav-pills .img-1.hide,
-.nav-pills .img-2.hide {
-  position: absolute;
-  opacity: 0;
-  visibility: hidden;
-  transition: opacity 1s, visibility 1s; }
 .nav-pills .tab-link .img-1 {
   display: block; }
 .nav-pills .tab-link .img-2 {
