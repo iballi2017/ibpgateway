@@ -59,6 +59,8 @@ $(document).ready(function () {
 
 });
 
+
+// testing page not refreshing on form button click
 function greet() {
   window.alert("Page will not refresh!")
 }
