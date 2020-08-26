@@ -197,13 +197,12 @@ form {
             outline: 0;
         }
 
-        // number inputs
+        // Number inputs (removing the spin button arrows on the right side)
         /* Chrome, Safari, Edge, Opera */
         &[type="number"]::-webkit-outer-spin-button,
         &[type="number"]::-webkit-inner-spin-button {
             -webkit-appearance: none;
         }
-
         /* Firefox */
         &[type="number"] {
             -moz-appearance: textfield;
@@ -220,6 +219,53 @@ form {
         &[disabled] {
             opacity: 0.4;
         }
+    }
+
+    // from external import
+    input[type="text"] {
+        padding: 7px;
+    }
+    input[type="text"]:focus {
+        outline: 0;
+    }
+
+    .form_grp input {
+        width: 100%;
+    }
+    .form_grp label,
+    .form_grp input {
+        display: block;
+    }
+    .form_grp label {
+        position: absolute;
+        top: -0.7em;
+        margin: 0;
+        left: 5px;
+        font-size: 0.7rem;
+        background-color: #ffffff;
+        padding-right: 0.4em;
+        padding-left: 0.4em;
+        transition: all 300ms ease-in-out;
+        -moz-transition: all 300ms ease-in-out;
+        -o-transition: all 300ms ease-in-out;
+        -webkit-transition: all 300ms ease-in-out;
+    }
+    .form_grp label.sit {
+        position: absolute;
+        top: unset;
+        bottom: 20%;
+        margin: 0;
+        left: 5px;
+        font-size: 1rem;
+        background-color: unset;
+        transition: all 300ms ease-in-out;
+        -moz-transition: all 300ms ease-in-out;
+        -o-transition: all 300ms ease-in-out;
+        -webkit-transition: all 300ms ease-in-out;
+    }
+    .form_grp {
+        position: relative;
+        margin-bottom: 1.2em;
     }
 }
 
