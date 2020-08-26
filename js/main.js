@@ -35,8 +35,6 @@ $(document).ready(function () {
       // console.log($(this).siblings("label"))
       $(this).siblings().removeClass("sit")
     }
-
-    console.log($(this).val())
   })
   $(".form_control").focusout(function () {
     // console.log($(this).siblings())
@@ -61,7 +59,9 @@ $(document).ready(function () {
 
 });
 
-
+function greet() {
+  window.alert("Page will not refresh!")
+}
 
 // Vanilla Javascript block
 // back history
