@@ -2,25 +2,25 @@
 
 $(document).ready(function () {
 
-  $(".form_control").focus(function () {
-    // console.log($(this).siblings())
-    if ($(this).siblings().hasClass("sit")) {
-      if ($(this).siblings("label").hasClass("valid-till")) {
-        $(this).attr('placeholder', "00/00");
-      }
-      console.log($(this).siblings("label"))
-      $(this).siblings().removeClass("sit")
-    }
-  })
-  $(".form_control").focusout(function () {
-    // console.log($(this).siblings())
-    if (!$(this).siblings().hasClass("sit")) {
-      $(this).siblings().addClass("sit")
-      if ($(this).attr('placeholder')) {
-        $(this).removeAttr('placeholder');
-      }
-    }
-  })
+  // $(".form_control").focus(function () {
+  //   // console.log($(this).siblings())
+  //   if ($(this).siblings().hasClass("sit")) {
+  //     if ($(this).siblings("label").hasClass("valid-till")) {
+  //       $(this).attr('placeholder', "00/00");
+  //     }
+  //     console.log($(this).siblings("label"))
+  //     $(this).siblings().removeClass("sit")
+  //   }
+  // })
+  // $(".form_control").focusout(function () {
+  //   // console.log($(this).siblings())
+  //   if (!$(this).siblings().hasClass("sit")) {
+  //     $(this).siblings().addClass("sit")
+  //     if ($(this).attr('placeholder')) {
+  //       $(this).removeAttr('placeholder');
+  //     }
+  //   }
+  // })
 });
 
 

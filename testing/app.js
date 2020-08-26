@@ -3,7 +3,7 @@ $(document).ready(function () {
     // alert("jlgjglgu")
 
 
-    (function () {
+    function textFocus(){
         if (!$(".form_control").val()) {
             if (!$(".form_control").siblings().hasClass("sit")) {
                 $(".form_control").siblings().addClass("sit")
@@ -20,6 +20,11 @@ $(document).ready(function () {
         // console.log("bnbb")
         // console.log("hello")
     }
+
+
+    (function () {
+        textFocus();
+    }
     )(jQuery);
 
 
@@ -28,6 +33,9 @@ $(document).ready(function () {
         if ($(this).siblings().hasClass("sit")) {
             if ($(this).siblings("label").hasClass("valid-till")) {
                 $(this).attr('placeholder', "00/00");
+            }
+            if ($(this).siblings("label").hasClass("dob")) {
+                $(this).attr('placeholder', "DD/MM/YYYY");
             }
             // console.log($(this).siblings("label"))
             $(this).siblings().removeClass("sit")

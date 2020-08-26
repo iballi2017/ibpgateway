@@ -114,65 +114,38 @@
                                 <span>Enter your Card details</span>
                             </div>
                             <form action="#" class="mt-3">
-                                <!-- <div class="row">
+
+
+                                <!-- form content -->
+
+                                <div class="row">
                                     <div class="col-12 col-md-6">
-                                        <div class="filled">
-                                            <label for="cardName" class="px-2">Card Name</label>
-                                            <input type="text" id="cardName">
+                                        <div class="form_grp filled">
+                                            <label for="cname" class="sit">Card Name</label>
+                                            <input type="text" name="cname" id="cname" class="form_control">
                                         </div>
                                     </div>
                                     <div class="col-12 col-md-6">
-                                        <div class="filled">
-                                            <input type="number" id="cardNumber" placeholder="Card Number">
+                                        <div class="form_grp filled">
+                                            <label for="cNumber" class="sit">Card Number</label>
+                                            <input type="text" name="cNumber" id="cNumber" class="form_control">
                                         </div>
                                     </div>
                                 </div>
                                 <div class="row">
                                     <div class="col-12 col-md-6">
-                                        <div class="filled">
-                                            <label for="cardName" class="px-2">Valid Till</label>
-                                            <input type="number" id="cardName" placeholder="00/00">
+                                        <div class="form_grp filled">
+                                            <label for="validity" class="sit valid-till">Valid Till</label>
+                                            <input type="text" name="validity" id="validity" class="form_control">
                                         </div>
                                     </div>
                                     <div class="col-12 col-md-6">
-                                        <div class="filled">
-                                            <input type="text" id="cvv" placeholder="CVV" maxlength="3"
-                                                pattern="[0-9]{7}">
+                                        <div class="form_grp filled">
+                                            <label for="cvv" class="sit">CVV</label>
+                                            <input type="text" name="cvv" id="cvv" class="form_control">
                                         </div>
                                     </div>
-                                </div> -->
-
-                                <!-- test -->
-
-<div class="row">
-    <div class="col-12 col-md-6">
-        <div class="form_grp filled">
-            <label for="cname" class="sit">Card Name</label>
-            <input type="text" name="cname" id="cname" class="form_control">
-        </div>
-    </div>
-    <div class="col-12 col-md-6">
-        <div class="form_grp filled">
-            <label for="cNumber" class="sit">Card Number</label>
-            <input type="text" name="cNumber" id="cNumber" class="form_control">
-        </div>
-    </div>
-</div>
-<div class="row">
-    <div class="col-12 col-md-6">
-        <div class="form_grp filled">
-            <label for="cname" class="sit valid-till">Valid Till</label>
-            <input type="text" name="cname" id="cname" class="form_control">
-        </div>
-    </div>
-    <div class="col-12 col-md-6">
-        <div class="form_grp filled">
-            <label for="cNumber" class="sit">CVV</label>
-            <input type="text" name="cNumber" id="cNumber" class="form_control">
-        </div>
-    </div>
-</div>
-
+                                </div>
 
                                 <!--  -->
                                 <div class="row">
@@ -196,12 +169,6 @@
                                 <div class="row">
                                     <div class="col-12 col-md-6">
                                         <div class="form-input-wrapper valid mt-1 mb-2 px-2">
-                                            <!-- this input is a read only input field -->
-                                            <!-- <input type="text" name="bank-name" class="bank-name m-0" id="" placeholder="Select Bank" readonly>
-                                            <select name="bank-short-code" class="bank-short-code" id="">
-                                                <option value="">*919*</option>
-                                                <option value="">*737*</option>
-                                            </select> -->
                                             <select name="" id="" class="bank-selector w-100">
                                                 <option value="uba">
                                                     <div>
@@ -251,31 +218,40 @@
                                 <span>Enter your Card details</span>
                             </div>
                             <form action="#" class="mt-3">
+
+                                <!-- form content -->
+                                
                                 <div class="row">
                                     <div class="col-12 col-md-6">
-                                        <div class="filled">
-                                            <input type="text" id="acctName" placeholder="Account Number">
+                                        <div class="form_grp filled">
+                                            <label for="accountNumber" class="sit">Account Number</label>
+                                            <input type="text" name="accountNumber" id="accountNumber"
+                                                class="form_control">
                                         </div>
                                     </div>
                                     <div class="col-12 col-md-6">
-                                        <div class="filled">
-                                            <input type="number" id="bvnNumber" placeholder="BVN Number">
+                                        <div class="form_grp filled">
+                                            <label for="bvn" class="sit">BVN Number</label>
+                                            <input type="text" name="bvn" id="bvn" class="form_control">
                                         </div>
                                     </div>
                                 </div>
                                 <div class="row">
                                     <div class="col-12 col-md-6">
-                                        <div class="filled">
-                                            <label for="cardName" class="px-2">Date of Birth</label>
-                                            <input type="text" id="cardName" placeholder="DD/MM/YYYY">
+                                        <div class="form_grp filled">
+                                            <label for="dob" class="sit dob">Date of Birth</label>
+                                            <input type="text" name="dob" id="dob" class="form_control">
                                         </div>
                                     </div>
                                     <div class="col-12 col-md-6">
-                                        <div class="filled">
-                                            <input type="text" id="phoneNumber" placeholder="Phone Number">
+                                        <div class="form_grp filled">
+                                            <label for="phoneF" class="sit">Phone Number</label>
+                                            <input type="text" name="phoneF" id="phoneF" class="form_control">
                                         </div>
                                     </div>
                                 </div>
+
+                                <!--  -->
                                 <div class="row">
                                     <div class="col text-center">
                                         <button class="submit-btn rounded py-2 btn-outline-0" disabled>
@@ -317,14 +293,18 @@
                             </div>
                             <section>
                                 <form action="#" class="mt-3 pay-attitude-form">
+                                    
+                                    <!-- Form content -->
+
                                     <div class="row">
                                         <div class="col-12 col-md-6">
-                                            <div class="filled">
-                                                <input type="text" id="cardNumber"
-                                                    placeholder="Enter your Phone Number">
+                                            <div class="form_grp filled">
+                                                <label for="phoneNumber" class="sit">Phone Number</label>
+                                                <input type="text" name="phoneNumber" id="phoneNumber" class="form_control">
                                             </div>
                                         </div>
-                                    </div>
+                                    </div>                                    
+                                    <!--  -->
                                     <div class="row">
                                         <div class="col text-center">
                                             <button class="submit-btn rounded py-2 btn-outline-0" disabled>
@@ -333,6 +313,7 @@
                                             </button>
                                         </div>
                                     </div>
+
                                 </form>
                             </section>
                             <section class="transaction-pin-area">
@@ -380,6 +361,7 @@
         crossorigin="anonymous"></script>
     <!-- custom js -->
     <script src="./js/main.js"></script>
+    <script src="./testing/app.js"></script>
 </body>
 
 </html>
