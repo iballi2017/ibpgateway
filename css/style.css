@@ -10,7 +10,7 @@ body {
   padding: 0;
   color: #585858;
   background-image: url(../assets/images/gateway_background_image.png);
-  background-size: cover;
+  background-size: 100% 100%;
   background-repeat: no-repeat; }
 
 .shadow {
@@ -79,22 +79,34 @@ body {
   .qr-wrapper .qr-img-wrapper img {
     width: 100%; }
 
-.img-1.hide, .img-2.hide {
+.nav-pills .img-1.hide,
+.nav-pills .img-2.hide {
   position: absolute;
-  opacity: 0; }
-
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 1s, visibility 1s; }
 .nav-pills .tab-link .img-1 {
-  display: block; }
+  position: relative;
+  opacity: 1;
+  visibility: visible; }
 .nav-pills .tab-link .img-2 {
-  display: none; }
+  position: absolute;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 250ms, visibility 250ms; }
 .nav-pills .tab-link.active {
   background-color: #ffffff; }
   .nav-pills .tab-link.active + .checked-img-wrapper .checked-img {
     opacity: 1; }
   .nav-pills .tab-link.active .img-1 {
-    display: none; }
+    position: absolute;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 250ms, visibility 250ms; }
   .nav-pills .tab-link.active .img-2 {
-    display: block; }
+    position: relative;
+    opacity: 1;
+    visibility: visible; }
 .nav-pills .ab-demog-img {
   width: 40%; }
 .nav-pills .tab-label {
@@ -172,6 +184,8 @@ form .submit-btn {
 .ussd_form .form-input-wrapper.valid {
   border: 1px solid #d71920; }
 
+.transaction-pin-area.hide {
+  display: none; }
 .transaction-pin-area .pin-input-wrapper {
   display: flex;
   width: 30%;

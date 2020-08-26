@@ -19,7 +19,7 @@ body {
     padding: 0;
     color: $text_color;
     background-image: url(../assets/images/gateway_background_image.png);
-    background-size: cover;
+    background-size: 100% 100%;
     background-repeat: no-repeat;
 }
 
@@ -109,31 +109,58 @@ body {
     }
 }
 
-// 
-.img-1.hide, .img-2.hide{
-    position: absolute;
-    opacity: 0;    
-}
-// 
-
 .nav-pills {
+    .img-1.hide,
+    .img-2.hide {
+        position: absolute;
+        opacity: 0;
+        visibility: hidden;
+        transition: opacity 1s, visibility 1s;
+        // transition: all 500ms ease-in-out;
+    }
     .tab-link {
-            .img-1{
-                display: block;
-            }
-            .img-2{
-                display: none;
-            }
+        .img-1 {
+                // ###### OPTION 1: use display to hide and show without animation
+                // display: block;
+                // 
+                // ###### OPTION 2: use opacity and visibility below for animation
+            position: relative;
+            opacity: 1;
+            visibility: visible;
+        }
+        .img-2 {
+                // ###### OPTION 1: use display to hide and show without animation
+                // display: none;
+                // 
+                // ###### OPTION 2: use opacity and visibility below for animation
+            position: absolute;
+            opacity: 0;
+            visibility: hidden;
+            transition: opacity 250ms, visibility 250ms;
+        }
         &.active {
             background-color: $white_color;
             + .checked-img-wrapper .checked-img {
                 opacity: 1;
             }
-            .img-1{
-                display: none;
+            .img-1 {
+                // ###### OPTION 1: use display to hide and show without animation
+                // display: none;
+                // 
+                // ###### OPTION 2: use opacity and visibility below for animation
+                position: absolute;
+                opacity: 0;
+                visibility: hidden;
+                transition: opacity 250ms, visibility 250ms;
             }
-            .img-2{
-                display: block;
+            .img-2 {
+                // ###### OPTION 1: use display to hide and show without animation
+                // display: block;
+                // 
+                // ###### OPTION 2: use opacity and visibility below for animation
+                position: relative;
+                opacity: 1;
+                visibility: visible;
             }
         }
     }
@@ -230,15 +257,6 @@ form {
         height: 35px;
         display: flex;
         align-items: center;
-        // .bank-name,
-        // .bank-short-code {
-        //     border: none;
-        // }
-        // .bank-short-code {
-        //     &:focus{
-        //         outline: 0;
-        //     }
-        // }
         .bank-selector {
             border: none;
             &:focus {
@@ -251,9 +269,8 @@ form {
     }
 }
 
-.pay-attitude-form {
-}
 .transaction-pin-area {
+    &.hide{display: none;}
     .pin-input-wrapper {
         display: flex;
         width: 30%;
