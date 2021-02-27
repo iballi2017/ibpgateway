@@ -4,14 +4,15 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>IBP Gateway</title>
+    <title>IBP Gateway Version 2</title>
     <!-- Fontawesome 5.13.x -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css" />
     <!-- bootstrap 4.3.1 css -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
         integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <link rel="stylesheet" href="./css/style.css">
-
+    <!-- stylesheet update -->
+    <link rel="stylesheet" href="./stylesheet/css/style.min.css">
 </head>
 
 <body>
@@ -40,81 +41,69 @@
                     <div class="cut_separator">
                         <span>Select payment option</span>
                     </div>
-                    <ul class="nav nav-pills mb-3 tab-nav" id="pills-tab" role="tablist">
-                        <li class="nav-item">
-                            <a class="nav-link tab-link active text-center shadow m-1 p-2" id="pills-card-tab"
-                                data-toggle="pill" href="#pills-card" role="tab" aria-controls="pills-card"
-                                aria-selected="true">
+
+                    <ul class="payment-nav px-0 list-children-style-0 d-flex flex-justify-between align-items-center">
+                        <li class="pay-item active">
+                            <!-- A -->
+                            <div class="shadow p-2 link text-center">
                                 <img src="./assets/images/grey-card.png" class="tab-demog-img img-1" alt="">
                                 <img src="./assets/images/red-card.png" class="tab-demog-img img-2" alt="">
                                 <div class="tab-label">Card</div>
-                            </a>
-                            <div class="checked-img-wrapper text-center">
                                 <img src="./assets/images/tab-checked.png" class="checked-img" alt="">
                             </div>
+                            <input type="radio" name="pay-option" value="card" class="pay-default-radio">
                         </li>
-                        <li class="nav-item">
-                            <a class="nav-link tab-link text-center shadow m-1 p-2" id="pills-ussd-tab"
-                                data-toggle="pill" href="#pills-ussd" role="tab" aria-controls="pills-ussd"
-                                aria-selected="false">
+                        <li class="pay-item">
+                            <!-- B -->
+                            <div class="p-2 link text-center">
                                 <img src="./assets/images/grey-ussd.png" class="tab-demog-img img-1" alt="">
                                 <img src="./assets/images/red-ussd.png" class="tab-demog-img img-2" alt="">
                                 <div class="tab-label">USSD</div>
-                            </a>
-                            <div class="checked-img-wrapper text-center">
                                 <img src="./assets/images/tab-checked.png" class="checked-img" alt="">
                             </div>
+                            <input type="radio" name="pay-option" value="ussd" class="pay-default-radio">
                         </li>
-                        <li class="nav-item">
-                            <a class="nav-link tab-link text-center shadow m-1 p-2" id="pills-direct_debit-tab"
-                                data-toggle="pill" href="#pills-direct_debit" role="tab"
-                                aria-controls="pills-direct_debit" aria-selected="false">
+                        <li class="pay-item">
+                            <!-- C -->
+                            <div class="p-2 link text-center">
                                 <img src="./assets/images/grey-directDebit.png" class="tab-demog-img img-1" alt="">
                                 <img src="./assets/images/red-directDebit.png" class="tab-demog-img img-2" alt="">
                                 <div class="tab-label">Direct Debit</div>
-                            </a>
-                            <div class="checked-img-wrapper text-center">
                                 <img src="./assets/images/tab-checked.png" class="checked-img" alt="">
                             </div>
+                            <input type="radio" name="pay-option" value="directDebit" class="pay-default-radio">
                         </li>
-                        <li class="nav-item">
-                            <a class="nav-link tab-link text-center shadow m-1 p-2" id="pills-qr_code-tab"
-                                data-toggle="pill" href="#pills-qr_code" role="tab" aria-controls="pills-qr_code"
-                                aria-selected="false">
+                        <li class="pay-item">
+                            <!-- D -->
+                            <div class="p-2 link text-center">
                                 <img src="./assets/images/grey-qr.png" class="tab-demog-img img-1" alt="">
                                 <img src="./assets/images/red-qr.png" class="tab-demog-img img-2" alt="">
                                 <div class="tab-label">QR Code</div>
-                            </a>
-                            <div class="checked-img-wrapper text-center">
                                 <img src="./assets/images/tab-checked.png" class="checked-img" alt="">
                             </div>
+                            <input type="radio" name="pay-option" value="qrCode" class="pay-default-radio">
                         </li>
-                        <li class="nav-item">
-                            <a class="nav-link tab-link text-center shadow m-1 p-2" id="pills-pay_attitude-tab"
-                                data-toggle="pill" href="#pills-pay_attitude" role="tab"
-                                aria-controls="pills-pay_attitude" aria-selected="false">
+                        <li class="pay-item">
+                            <!-- E -->
+                            <div class="p-2 link text-center">
                                 <img src="./assets/images/grey-payAttitude.png" class="tab-demog-img img-1" alt="">
                                 <img src="./assets/images/red-payAttitude.png" class="tab-demog-img img-2" alt="">
                                 <div class="tab-label">Pay Attitude</div>
-                            </a>
-                            <div class="checked-img-wrapper text-center">
                                 <img src="./assets/images/tab-checked.png" class="checked-img" alt="">
                             </div>
+                            <input type="radio" name="pay-option" value="payAttitude" class="pay-default-radio">
                         </li>
                     </ul>
-                    <div class="tab-content" id="pills-tabContent">
 
-                        <!-- Card content -->
-                        <div class="tab-pane fade show active" id="pills-card" role="tabpanel"
-                            aria-labelledby="pills-card-tab">
+
+                    <div class="option-content">
+                        <div class="tab_content" id="card">
+                            <!-- A Content -->
                             <div class="cut_separator">
                                 <span>Enter your Card details</span>
                             </div>
                             <form action="#" class="mt-3">
-
-
                                 <!-- form content -->
-
                                 <div class="row">
                                     <div class="col-12 col-md-6">
                                         <div class="form_grp filled">
@@ -150,12 +139,12 @@
                                                 class="text-capitalize">pay</span>&nbsp;<span>N</span><span>3,250.00</span>
                                         </button>
                                     </div>
-                                </div><!--  -->
+                                </div>
+                                <!--  -->
                             </form>
-
                         </div>
-                        <!-- USSD content -->
-                        <div class="tab-pane fade" id="pills-ussd" role="tabpanel" aria-labelledby="pills-ussd-tab">
+                        <div class="tab_content hide" id="ussd">
+                            <!-- B Content -->
                             <div class="cut_separator">
                                 <span>Select your bank to pay with USSD</span>
                             </div>
@@ -193,7 +182,8 @@
                                         <input type="text" name="bank-code" id="bankCode" value="*919*00*3250#"
                                             class="bank-code p-0 m-0" readonly>
                                     </div>
-                                    <button onclick="myFunction(); return false" class="clipboard-btn btn-outline-0">Copy to
+                                    <button onclick="myFunction(); return false"
+                                        class="clipboard-btn btn-outline-0">Copy to
                                         clipboard</button>
                                 </div>
                                 <div class="row">
@@ -205,17 +195,15 @@
                                 </div>
                             </form>
                         </div>
-
-                        <!-- Direct Debit content -->
-                        <div class="tab-pane fade" id="pills-direct_debit" role="tabpanel"
-                            aria-labelledby="pills-direct_debit-tab">
+                        <div class="tab_content hide" id="directDebit">
+                            <!-- C Content -->
                             <div class="cut_separator">
-                                <span>Enter your Card details</span>
+                                <span>Enter your bank details</span>
                             </div>
                             <form action="#" class="mt-3">
 
                                 <!-- form content -->
-                                
+
                                 <div class="row">
                                     <div class="col-12 col-md-6">
                                         <div class="form_grp filled">
@@ -257,10 +245,8 @@
                                 <!--  -->
                             </form>
                         </div>
-
-                        <!-- QR code content -->
-                        <div class="tab-pane fade" id="pills-qr_code" role="tabpanel"
-                            aria-labelledby="pills-qr_code-tab">
+                        <div class="tab_content hide" id="qrCode">
+                            <!-- D Content -->
                             <div class="cut_separator">
                                 <span>Scan the QR code with your mobile phone</span>
                             </div>
@@ -279,29 +265,28 @@
                                 </div>
                             </section>
                         </div>
-
-                        <!-- Payment attitude content -->
-                        <div class="tab-pane fade" id="pills-pay_attitude" role="tabpanel"
-                            aria-labelledby="pills-pay_attitude-tab">
+                        <div class="tab_content hide" id="payAttitude">
+                            <!-- E Content -->
                             <div class="cut_separator">
                                 <span>Enter your Phone Number</span>
                             </div>
                             <section>
                                 <form action="#" class="mt-3 pay-attitude-form">
-                                    
+
                                     <!-- Form content -->
 
                                     <div class="row">
                                         <div class="col-12 col-md-6">
                                             <div class="form_grp filled">
                                                 <label for="phoneNumber" class="sit">Phone Number</label>
-                                                <input type="text" name="phoneNumber" id="phoneNumber" class="form_control pay-attitude-phone">
+                                                <input type="text" name="phoneNumber" id="phoneNumber"
+                                                    class="form_control pay-attitude-phone">
                                             </div>
                                         </div>
-                                    </div>         
+                                    </div>
                                     <div class="row">
                                         <div class="col text-center">
-                                            <button class="submit-btn rounded py-2 btn-outline-0" type="button" onclick="greet(); return false">
+                                            <button class="submit-btn rounded py-2 btn-outline-0" type="button">
                                                 <span
                                                     class="text-capitalize">pay</span>&nbsp;<span>N</span><span>3,250.00</span>
                                             </button>
@@ -327,7 +312,8 @@
                                                 class="custom-text-danger fontweight-500 otp-link">Use OTP
                                                 instead?</a></p>
 
-                                        <button type="button" class="submit-btn rounded py-2 btn-outline-0" onclick="return false">
+                                        <button type="button" class="submit-btn rounded py-2 btn-outline-0"
+                                            onclick="return false">
                                             Confirm
                                         </button>
                                     </div>
@@ -337,6 +323,20 @@
                     </div>
                 </div>
             </div>
+
+
+            <!-- /* overlay */ -->
+            <div class="overlay"></div>
+            <!-- /* success message */ -->
+            <!-- <div class="success-message-wrapper">
+
+                <div class="card">
+                    <div class="card-body">
+                        <h3>Success!</h3>
+                    </div>
+                </div>
+
+            </div> -->
 
             <div class="text-center m-2">Instant Bills Pay powered by UBA</div>
         </div>
