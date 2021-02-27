@@ -1,8 +1,13 @@
 $white_color: #ffffff;
-$secondary_color: #d71920;
-$secondary_light:rgba(215,25,32,.3);
+$primary_color: #d71920;
+$primary_light:rgba(215,25,32,.3);
 $icons_lines_color: #adb0b4;
 $default-font-color: #202020;
+$text_color: #585858;
+// 
+// $white_color: #ffffff;
+// $secondary_color: #d71920;
+$icons_lines_color: #adb0b4;
 $text_color: #585858;
 @import url('https://fonts.googleapis.com/css2?family=Encode+Sans:wght@100;200;400;500;700;900&display=swap');
 $primary-font-family:  'Encode Sans', sans-serif;
@@ -29,4 +34,13 @@ html, body{
     @include mq(768px){
         // font-size: 22px;
     }
+}
+
+body{
+    background-image: url(../../assets/images/gateway-background-image.png);
+    margin: 0;
+    padding: 0;
+    color: $text_color;
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
 }

@@ -144,3 +144,18 @@ const triggerActive = (arg) => {
     }
 }
 
+/* sucess message */
+function handleSuccessModal(){
+    const successMessageWrapper = document.querySelector(".success-message-wrapper");
+    const overlay = document.querySelector(".overlay");
+    if(successMessageWrapper.classList.contains("hide") && overlay.classList.contains("hide")){
+        successMessageWrapper.classList.remove("hide")
+        overlay.classList.remove("hide")
+    }
+    setTimeout(()=>{
+        const ring = document.querySelector(".ring");
+        if(ring.classList.contains("hide")){
+            ring.classList.remove("hide")
+        }
+    }, 800)
+}

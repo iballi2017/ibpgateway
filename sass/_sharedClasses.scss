@@ -1,5 +1,20 @@
-/* Form controls */
 
+
+/* Color classees */
+.primary-color{
+    color: $primary_color;
+}
+
+/* Buttons */
+.btn{
+    transition: all 300ms ease-in-out;
+    &:focus {
+        box-shadow: none;
+    }
+    border:none;
+}
+
+/* Form controls */
 input[type="text"],
 input[type="number"],
 input[type="email"],
@@ -16,7 +31,7 @@ select.custom-select {
     &:focus {
         outline: 0;
         box-shadow: none;
-        border: 1px solid $secondary-color;
+        border: 1px solid $primary-color;
     }
     &::placeholder {
         font-family: $primary-font-family;
