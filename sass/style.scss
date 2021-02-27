@@ -414,3 +414,15 @@ form {
         width: 60%;
     }
 }
+
+.form_grp{
+    position: relative;
+}
+
+.input-brand-icon{
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    top: 0;
+    z-index: 2;
+}
