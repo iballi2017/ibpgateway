@@ -1,0 +1,59 @@
+/* Form controls */
+
+input[type="text"],
+input[type="number"],
+input[type="email"],
+input[type="password"],
+input[type="date"],
+input[type="time"],
+input[type="file"],
+// .custom-file,
+.custom-file-input,
+.custom-file-label,
+textarea.form-control,
+select.custom-select {
+    // border: 1px solid $lightColor;
+    &:focus {
+        outline: 0;
+        box-shadow: none;
+        border: 1px solid $secondary-color;
+    }
+    &::placeholder {
+        font-family: $primary-font-family;
+    }
+    &::-webkit-input-placeholder {
+        /* Edge */
+        font-family: $primary-font-family;
+    }
+    &:-ms-input-placeholder {
+        /* Internet Explorer 10-11 */
+        font-family: $primary-font-family;
+    }
+}
+.form-control {
+    + .text-danger.hide {
+        display: none;
+    }
+}
+
+.uppercase{
+    text-transform: uppercase;
+}
+
+.lowercase{
+    text-transform: lowercase;
+}
+
+.capitalize{
+    text-transform: capitalize;
+}
+.display-6{
+    font-size: 1.3em;
+}
+.display-5{
+    font-size: 1.6em;
+}
+.display-4{
+    font-size: 1.9em;
+}
+
