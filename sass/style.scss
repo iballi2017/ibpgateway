@@ -1,5 +1,5 @@
 @import "_base";
-// @import "_sharedClasses";
+@import "_sharedClasses";
 
 .list-children-style-0 {
     >li {
@@ -33,17 +33,23 @@
 }
 
 ::-webkit-scrollbar-thumb {
-    background: $secondary_light;
+    background: $primary_light;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-    background: $secondary_color;
+    background: $primary_color;
 }
 
 
 .pay-default-radio[type="radio"] {
     position: absolute;
     left: -200000px;
+}
+
+
+.checked-img {
+    width: 15px;
+    opacity: 0;
 }
 
 .pay-item {
@@ -87,7 +93,6 @@
 
 .overlay {
     position: fixed;
-    display: none;
     width: 100%;
     height: 100%;
     top: 0;
@@ -97,22 +102,315 @@
     background-color: rgba(0, 0, 0, 0.5);
     z-index: 2;
     cursor: pointer;
+    &.hide{
+        display: none;
+    }
 }
 
 .success-message-wrapper {
     z-index: 3;
     position: absolute;
-    //   background-color: blue;
     height: 100%;
     width: 100%;
     top: 0;
     left: 0;
     right: 0;
     bottom: 0;
+    &.hide{
+        display: none;
+    }
 
     .card {
         max-width: 600px;
         margin: 0 auto;
-        margin-top: 10vw;
+        margin-top: 10em;
+        text-align: center;
+        .ring {
+            width: 70px;
+            height: 70px;
+            margin: 0 auto;
+            border: 2px solid #4CB527;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            &.hide{
+                transform: scale(0);
+                transform: rotate(40deg);
+                transition: all 300ms ease-in-out;
+            }
+            .tick{
+                height: 15px;
+                border-left: 2px solid #4CB527;
+                border-bottom: 2px solid #4CB527;
+                width: 50%;
+                transform: rotate(-35deg);
+                margin: 0 auto;
+            }
+          }
+    }
+}
+
+
+
+
+
+
+.flex-juspb-alc {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.shadow {
+    box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.1) !important;
+}
+
+.content-wrapper {
+    max-width: 700px;
+    margin: 0 auto;
+}
+
+.custom-bg-danger {
+    background-color: $primary_color;
+}
+.custom-text-danger {
+    color: $primary_color;
+}
+.back-history-arrow {
+    background-color: unset;
+    border: none;
+}
+
+.btn-outline-0 {
+    &:focus {
+        outline: 0;
+    }
+}
+
+.back-history-arrow:focus {
+    outline: 0;
+}
+
+.text-capitalize {
+    text-transform: capitalize;
+}
+
+.flex-justify-between {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.font-size-m {
+    font-size: 1.5rem;
+}
+
+.fontweight-500 {
+    font-weight: 500;
+}
+
+// this gives the red checked icon on input fields
+.filled::after {
+    content: "\f00c";
+    font-family: "Font Awesome 5 Free";
+    font-weight: 900;
+    color: $primary_color;
+    display: block;
+    position: absolute;
+    top: 0;
+    right: -1em;
+}
+
+.qr-wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    .qr-label-timer {
+        font-size: 1.8rem;
+        font-weight: 500;
+    }
+    .qr-img-wrapper {
+        img {
+            width: 100%;
+        }
+    }
+}
+
+
+.bottom-container {
+    border-radius: 25px 25px 0 0;
+}
+.cut_separator {
+    border-bottom: 0.7px solid $icons_lines_color;
+    position: relative;
+    margin-top: 3em;
+    margin-bottom: 1.5em;
+    > span {
+        font-weight: 600;
+    }
+}
+
+.bank-code {
+    font-size: 1.3rem;
+    border: none;
+    font-weight: 500;
+}
+.clipboard-btn {
+    border: none;
+    background-color: $icons_lines_color;
+    font-size: 0.6rem;
+    display: inline-flex;
+    border-radius: 3px;
+    padding: 0.7em;
+}
+
+.cut_separator > span {
+    position: absolute;
+    background-color: $white_color;
+    padding-right: 2em;
+    bottom: -0.4em;
+}
+
+form {
+    label {
+        position: absolute;
+        background-color: $white_color;
+        padding: 0;
+        top: -0.7em;
+        left: 2.6em;
+        font-size: 0.6rem;
+    }
+    input {
+        display: block;
+        width: 100%;
+        margin-bottom: 1.9em;
+        padding: 0.3em 0.6em;
+
+        &:focus {
+            outline: 0;
+        }
+
+        // Number inputs (removing the spin button arrows on the right side)
+        /* Chrome, Safari, Edge, Opera */
+        &[type="number"]::-webkit-outer-spin-button,
+        &[type="number"]::-webkit-inner-spin-button {
+            -webkit-appearance: none;
+        }
+        /* Firefox */
+        &[type="number"] {
+            -moz-appearance: textfield;
+        }
+    }
+
+    .submit-btn {
+        background-color: $primary_color;
+        border: none;
+        width: 100%;
+        color: #fff;
+        font-weight: 500;
+        font-size: 1.3rem;
+        &[disabled] {
+            opacity: 0.4;
+        }
+    }
+
+    // from external import
+    input[type="text"] {
+        padding: 7px;
+    }
+    input[type="text"]:focus {
+        outline: 0;
+    }
+
+    .form_grp input {
+        width: 100%;
+    }
+    .form_grp label,
+    .form_grp input {
+        display: block;
+    }
+    .form_grp label {
+        position: absolute;
+        top: -0.7em;
+        margin: 0;
+        left: 5px;
+        font-size: 0.7rem;
+        background-color: #ffffff;
+        padding-right: 0.4em;
+        padding-left: 0.4em;
+        transition: all 300ms ease-in-out;
+        -moz-transition: all 300ms ease-in-out;
+        -o-transition: all 300ms ease-in-out;
+        -webkit-transition: all 300ms ease-in-out;
+    }
+    .form_grp label.sit {
+        position: absolute;
+        top: unset;
+        bottom: 20%;
+        margin: 0;
+        left: 5px;
+        font-size: 1rem;
+        background-color: unset;
+        transition: all 300ms ease-in-out;
+        -moz-transition: all 300ms ease-in-out;
+        -o-transition: all 300ms ease-in-out;
+        -webkit-transition: all 300ms ease-in-out;
+    }
+    .form_grp {
+        position: relative;
+        margin-bottom: 1.2em;
+    }
+}
+
+.ussd_form {
+    .form-input-wrapper {
+        border: 1px solid $icons_lines_color;
+        height: 35px;
+        display: flex;
+        align-items: center;
+        .bank-selector {
+            border: none;
+            &:focus {
+                outline: 0;
+            }
+        }
+    }
+    .form-input-wrapper.valid {
+        border: 1px solid $primary_color;
+    }
+}
+
+.transaction-pin-area {
+    &.hide {
+        display: none;
+    }
+    .pin-input-wrapper {
+        display: flex;
+        width: 30%;
+        margin: 0 auto;
+        input {
+            margin: 0;
+            border-top: none;
+            border-right: none;
+            border-left: none;
+            text-align: center;
+            + input {
+                margin-left: 3px;
+            }
+        }
+    }
+    .otp-link {
+        text-decoration: none;
+        &:hover {
+            color: $text_color;
+        }
+    }
+}
+
+
+@include mq(768px){
+    form .submit-btn {
+        width: 60%;
     }
 }

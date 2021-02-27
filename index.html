@@ -10,7 +10,6 @@
     <!-- bootstrap 4.3.1 css -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
         integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-    <link rel="stylesheet" href="./css/style.css">
     <!-- stylesheet update -->
     <link rel="stylesheet" href="./stylesheet/css/style.min.css">
 </head>
@@ -18,6 +17,7 @@
 <body>
 
     <div class="pg-wrapper">
+        <button class="btn btn-default" onclick="handleSuccessModal()">Open success modal "Click"</button>
         <div class="content-wrapper">
             <div class="card mx-3 mt-5 custom-bg-danger">
                 <div class="card-header border-0 text-white">
@@ -128,7 +128,7 @@
                                     <div class="col-12 col-md-6">
                                         <div class="form_grp filled">
                                             <label for="cvv" class="sit">CVV</label>
-                                            <input type="text" name="cvv" id="cvv" class="form_control">
+                                            <input type="text" name="cvv" id="cvv" class="form_control" pattern="[0-9]{1}" maxlength="3">
                                         </div>
                                     </div>
                                 </div>
@@ -215,7 +215,7 @@
                                     <div class="col-12 col-md-6">
                                         <div class="form_grp filled">
                                             <label for="bvn" class="sit">BVN Number</label>
-                                            <input type="text" name="bvn" id="bvn" class="form_control">
+                                            <input type="text" name="bvn" id="bvn" class="form_control" pattern="[0-9]{1}" maxlength="11">
                                         </div>
                                     </div>
                                 </div>
@@ -306,10 +306,13 @@
                                             <input type="text" pattern="[0-9]{1}" maxlength="1" class="otp-digit">
                                             <input type="text" pattern="[0-9]{1}" maxlength="1" class="otp-digit">
                                             <input type="text" pattern="[0-9]{1}" maxlength="1" class="otp-digit">
+                                            <input type="text" pattern="[0-9]{1}" maxlength="1" class="otp-digit">
+                                            <input type="text" pattern="[0-9]{1}" maxlength="1" class="otp-digit">
+                                            <input type="text" pattern="[0-9]{1}" maxlength="1" class="otp-digit">
                                         </div>
 
-                                        <p class="my-4"><a href="#"
-                                                class="custom-text-danger fontweight-500 otp-link">Use OTP
+                                        <p class="mt-4 mb-2"><a href="#"
+                                                class="btn btn-default custom-text-danger fontweight-500 otp-link">Use OTP
                                                 instead?</a></p>
 
                                         <button type="button" class="submit-btn rounded py-2 btn-outline-0"
@@ -326,19 +329,27 @@
 
 
             <!-- /* overlay */ -->
-            <div class="overlay"></div>
+            <div class="overlay hide"></div>
             <!-- /* success message */ -->
-            <!-- <div class="success-message-wrapper">
+            <div class="success-message-wrapper px-2 hide">
 
                 <div class="card">
                     <div class="card-body">
-                        <h3>Success!</h3>
+                        <div class="ring mb-2 hide">
+                            <div class="tick"></div>
+                        </div>
+                        <h4>Success!</h4>
+                        <p>Your item has been successfully purchased</p>
+                        <p>
+                            <a href="#" class="btn btn-default primary-color">View Receipt</a>
+                        </p>
+                        <a href="#" class="btn btn-default primary-color">Back</a>
                     </div>
                 </div>
 
-            </div> -->
+            </div>
 
-            <div class="text-center m-2">Instant Bills Pay powered by UBA</div>
+            <footer class="text-center m-2">Instant Bills Pay powered by UBA</footer>
         </div>
     </div>
 
