@@ -440,6 +440,14 @@ select.custom-select:-ms-input-placeholder {
   font-weight: 600;
 }
 
+.cut_separator .dynText.hide {
+  display: none;
+}
+
+.cut_separator .dynText.hide + .dynText2 {
+  text-transform: capitalize;
+}
+
 .bank-code {
   font-size: 1.3rem;
   border: none;
