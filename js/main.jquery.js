@@ -32,8 +32,11 @@ $(document).ready(function () {
     })
 
     $(".form_control").focusout(function () {
-        // console.log($(this).siblings())
         if (!$(this).val()) {
+            if($(this).attr('type')==='date'){
+                return;
+            }
+
             if (!$(this).siblings().hasClass("sit")) {
                 $(this).siblings().addClass("sit")
                 if ($(this).attr('placeholder')) {
