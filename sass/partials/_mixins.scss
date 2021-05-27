@@ -1,0 +1,75 @@
+/* minimum media query */
+
+@mixin minmq($size) {
+    @media(min-width: $size) {
+        @content;
+    }
+}
+
+
+/* maximum media query */
+
+@mixin maxmq($size) {
+    @media(max-width: $size) {
+        @content;
+    }
+}
+
+
+/* maximum and minimum query */
+
+@mixin maxminmq($maxSize, $minSize) {
+    @media screen and (max-width: $maxSize) and (min-width: $minSize) {
+        @content;
+    }
+}
+
+
+/* tranform effects */
+
+@mixin transform($property) {
+    -webkit-transform: $property;
+    -ms-transform: $property;
+    transform: $property;
+}
+
+
+/* transition effects */
+
+@mixin transition($property) {
+    transition: $property;
+    -webkit-transition: $property;
+    -ms-transition: $property;
+    transition: $property;
+}
+
+
+/* form control appearance */
+
+@mixin appearance($property) {
+    -webkit-appearance: $property;
+    -moz-appearance: $property;
+    -ms-appearance: $property;
+    -o-appearance: $property;
+    appearance: $property;
+}
+
+
+/* 'before' pseudo element style */
+
+@mixin before($code, $fontSize) {
+    content: $code;
+    font-family: 'Font Awesome 5 Free';
+    font-weight: 900;
+    font-size: $fontSize;
+}
+
+
+/* 'after' pseudo element style */
+
+@mixin after($code, $fontSize) {
+    content: $code;
+    font-family: 'Font Awesome 5 Free';
+    font-weight: 900;
+    font-size: $fontSize;
+}

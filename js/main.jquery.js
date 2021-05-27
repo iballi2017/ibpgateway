@@ -1,4 +1,4 @@
-$(document).ready(function () {
+$(document).ready(function() {
     function textFocus() {
         if (!$(".form_control").val()) {
             if (!$(".form_control").siblings().hasClass("sit")) {
@@ -12,12 +12,12 @@ $(document).ready(function () {
         }
     }
 
-    (function () {
+    (function() {
         textFocus();
     })(jQuery);
 
 
-    $(".form_control").focus(function () {
+    $(".form_control").focus(function() {
         // console.log($(this).siblings())
         if ($(this).siblings().hasClass("sit")) {
             if ($(this).siblings("label").hasClass("valid-till")) {
@@ -31,9 +31,9 @@ $(document).ready(function () {
         }
     })
 
-    $(".form_control").focusout(function () {
+    $(".form_control").focusout(function() {
         if (!$(this).val()) {
-            if($(this).attr('type')==='date'){
+            if ($(this).attr('type') === 'date') {
                 return;
             }
 
@@ -46,7 +46,7 @@ $(document).ready(function () {
         }
     })
 
-    $(".pay-attitude-phone").keyup(function () {
+    $(".pay-attitude-phone").keyup(function() {
         if ($(this).val()) {
             $(".transaction-pin-area").removeClass("hide")
         } else {
@@ -54,4 +54,17 @@ $(document).ready(function () {
         }
     })
 
+
+
+
+
+    /* USSD modal */
+    $("#handleUssdModal").click(function() {
+        const ussdModalWrapper = $(".ussd-message-wrapper");
+        const overlay = $(".overlay");
+        // ussdModalWrapper.show();
+        // overlay.show();
+        ussdModalWrapper.removeClass("hide")
+        overlay.removeClass("hide")
+    });
 });

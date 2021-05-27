@@ -1,0 +1,21 @@
+{
+    "name": "ibp-gateway-v2",
+    "version": "1.0.0",
+    "description": "",
+    "main": "index.js",
+    "scripts": {
+        "test": "echo \"Error: no test specified\" && exit 1",
+        "start": "sass --watch sass/style.scss stylesheet/css/style.min.css"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/iballi2017/ibpgateway.git"
+    },
+    "keywords": [],
+    "author": "",
+    "license": "ISC",
+    "bugs": {
+        "url": "https://github.com/iballi2017/ibpgateway/issues"
+    },
+    "homepage": "https://github.com/iballi2017/ibpgateway#readme"
+}

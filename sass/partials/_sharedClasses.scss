@@ -1,12 +1,13 @@
-
-
 /* Color classees */
-.primary-color{
+
+.primary-color {
     color: $primary_color;
 }
 
+
 /* Buttons */
-.btn{
+
+.btn {
     transition: all 300ms ease-in-out;
     &:focus {
         box-shadow: none;
@@ -14,7 +15,9 @@
     border:none;
 }
 
+
 /* Form controls */
+
 input[type="text"],
 input[type="number"],
 input[type="email"],
@@ -45,30 +48,41 @@ select.custom-select {
         font-family: $primary-font-family;
     }
 }
+
 .form-control {
-    + .text-danger.hide {
+    +.text-danger.hide {
         display: none;
     }
 }
 
-.uppercase{
+.uppercase {
     text-transform: uppercase;
 }
 
-.lowercase{
+.lowercase {
     text-transform: lowercase;
 }
 
-.capitalize{
+.capitalize {
     text-transform: capitalize;
 }
-.display-6{
+
+.display-6 {
     font-size: 1.3em;
 }
-.display-5{
+
+.display-5 {
     font-size: 1.6em;
 }
-.display-4{
+
+.display-4 {
     font-size: 1.9em;
 }
 
+.bold {
+    font-weight: bold;
+}
+
+.bold-600 {
+    font-weight: 600;
+}

@@ -1,6 +1,6 @@
-@import "_base";
-@import "_sharedClasses";
-
+@import "./partials/_base";
+@import "./partials/_sharedClasses";
+@import "./partials/mixins";
 .list-children-style-0 {
     >li {
         list-style: none;
@@ -23,7 +23,9 @@
     padding-bottom: .5em;
 }
 
+
 /* scrollbar */
+
 ::-webkit-scrollbar {
     height: 4px;
 }
@@ -40,12 +42,10 @@
     background: $primary_color;
 }
 
-
 .pay-default-radio[type="radio"] {
     position: absolute;
     left: -200000px;
 }
-
 
 .checked-img {
     width: 15px;
@@ -55,32 +55,25 @@
 .pay-item {
     width: 100%;
     text-align: center;
-
     .link {
         cursor: pointer;
-
         .tab-demog-img {
             margin: 0 auto;
         }
-
         .img-1 {
             display: block;
         }
-
         .img-2 {
             display: none;
         }
     }
-
     &.active {
         .checked-img {
             opacity: 1;
         }
-
         .tab-demog-img.img-1 {
             display: none;
         }
-
         .tab-demog-img.img-2 {
             display: block;
         }
@@ -98,7 +91,6 @@
     background-color: rgba(0, 0, 0, 0.5);
     z-index: 2;
     cursor: pointer;
-
     &.hide {
         display: none;
     }
@@ -113,17 +105,14 @@
     left: 0;
     right: 0;
     bottom: 0;
-
     &.hide {
         display: none;
     }
-
     .card {
         max-width: 600px;
         margin: 0 auto;
         margin-top: 10em;
         text-align: center;
-
         .ring {
             width: 70px;
             height: 70px;
@@ -133,13 +122,11 @@
             display: flex;
             align-items: center;
             justify-content: center;
-
             &.hide {
                 transform: scale(0);
                 transform: rotate(40deg);
                 transition: all 300ms ease-in-out;
             }
-
             .tick {
                 height: 15px;
                 border-left: 2px solid #4CB527;
@@ -149,6 +136,73 @@
                 margin: 0 auto;
             }
         }
+    }
+}
+
+.ussd-message-wrapper {
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    height: 100%;
+    width: 100%;
+    z-index: 10000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    &.hide {
+        display: none;
+    }
+    .wrapper {
+        background-color: #ffffff;
+        width: 100%;
+        max-width: 700px;
+        min-height: 400px;
+        padding: 2em 1.5em;
+        @include minmq(765px) {
+            padding: 2em 1.5em 2em 0;
+            position: relative;
+            .inner {
+                display: flex;
+                align-items: flex-start;
+                justify-content: space-between;
+            }
+        }
+        .left {
+            flex-basis: 25%;
+        }
+        .right {
+            flex-basis: 74%;
+            border: 2px solid $primary_color;
+            padding: 1.8em;
+            height: 100%;
+            .info-card {
+                .heading {
+                    font-size: 1.3rem;
+                }
+                .code {
+                    font-size: 1.4rem;
+                    color: #FF0000;
+                }
+                .amount {
+                    font-weight: 600;
+                    white-space: nowrap;
+                }
+                // .countdown{
+                // }
+            }
+        }
+        .option {
+            background-color: $primary_color;
+            color: #ffffff;
+            padding-top: 1em;
+            padding-bottom: 1em;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        // #FF0000
     }
 }
 
@@ -224,19 +278,16 @@
     display: flex;
     justify-content: space-between;
     align-items: flex-end;
-
     .qr-label-timer {
         font-size: 1.8rem;
         font-weight: 500;
     }
-
     .qr-img-wrapper {
         img {
             width: 100%;
         }
     }
 }
-
 
 .bottom-container {
     border-radius: 25px 25px 0 0;
@@ -247,15 +298,13 @@
     position: relative;
     margin-top: 3em;
     margin-bottom: 1.5em;
-
     >span {
         font-weight: 600;
     }
-
     .dynText {
         &.hide {
             display: none;
-            + .dynText2{
+            +.dynText2 {
                 text-transform: capitalize;
             }
         }
@@ -293,30 +342,25 @@ form {
         left: 2.6em;
         font-size: 0.6rem;
     }
-
     input {
         display: block;
         width: 100%;
         margin-bottom: 1.9em;
         padding: 0.3em 0.6em;
-
         &:focus {
             outline: 0;
         }
-
         // Number inputs (removing the spin button arrows on the right side)
         /* Chrome, Safari, Edge, Opera */
         &[type="number"]::-webkit-outer-spin-button,
         &[type="number"]::-webkit-inner-spin-button {
             -webkit-appearance: none;
         }
-
         /* Firefox */
         &[type="number"] {
             -moz-appearance: textfield;
         }
     }
-
     .submit-btn {
         background-color: $primary_color;
         border: none;
@@ -324,30 +368,24 @@ form {
         color: #fff;
         font-weight: 500;
         font-size: 1.3rem;
-
         &[disabled] {
             opacity: 0.4;
         }
     }
-
     // from external import
     input[type="text"] {
         padding: 7px;
     }
-
     input[type="text"]:focus {
         outline: 0;
     }
-
     .form_grp input {
         width: 100%;
     }
-
     .form_grp label,
     .form_grp input {
         display: block;
     }
-
     .form_grp label {
         position: absolute;
         top: -0.7em;
@@ -362,7 +400,6 @@ form {
         -o-transition: all 300ms ease-in-out;
         -webkit-transition: all 300ms ease-in-out;
     }
-
     .form_grp label.sit {
         position: absolute;
         top: unset;
@@ -376,7 +413,6 @@ form {
         -o-transition: all 300ms ease-in-out;
         -webkit-transition: all 300ms ease-in-out;
     }
-
     .form_grp {
         position: relative;
         margin-bottom: 1.2em;
@@ -389,16 +425,13 @@ form {
         height: 35px;
         display: flex;
         align-items: center;
-
         .bank-selector {
             border: none;
-
             &:focus {
                 outline: 0;
             }
         }
     }
-
     .form-input-wrapper.valid {
         border: 1px solid $primary_color;
     }
@@ -408,34 +441,28 @@ form {
     &.hide {
         display: none;
     }
-
     .pin-input-wrapper {
         display: flex;
         width: 30%;
         margin: 0 auto;
-
         input {
             margin: 0;
             border-top: none;
             border-right: none;
             border-left: none;
             text-align: center;
-
             +input {
                 margin-left: 3px;
             }
         }
     }
-
     .otp-link {
         text-decoration: none;
-
         &:hover {
             color: $text_color;
         }
     }
 }
-
 
 @include mq(768px) {
     form .submit-btn {

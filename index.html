@@ -8,8 +8,7 @@
     <!-- Fontawesome 5.13.x -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css" />
     <!-- bootstrap 4.3.1 css -->
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
-        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <!-- stylesheet update -->
     <link rel="stylesheet" href="./stylesheet/css/style.min.css">
 </head>
@@ -18,6 +17,7 @@
 
     <div class="pg-wrapper">
         <button class="btn btn-default" onclick="handleSuccessModal()">Open success modal "Click"</button>
+        <button class="btn btn-default" id="handleUssdModal">Open USSD modal "Click"</button>
         <div class="content-wrapper">
             <div class="card mx-3 mt-5 custom-bg-danger">
                 <div class="card-header border-0 text-white">
@@ -33,128 +33,126 @@
                             </div>
                             <div class="font-size-m">
                                 <span class="text-capitalize">pay</span>&nbsp;<span>N</span><span>3,250.00</span>
-                            </div>
-                        </span>
                     </div>
+                    </span>
                 </div>
-                <div class="card-body bottom-container bg-white">
-                    <div class="cut_separator">
-                        <span>
+            </div>
+            <div class="card-body bottom-container bg-white">
+                <div class="cut_separator">
+                    <span>
                             <span class="dynText">Select&nbsp;</span>
-                            <span class="dynText2">payment</span> option
-                        </span>
-                    </div>
+                    <span class="dynText2">payment</span> option
+                    </span>
+                </div>
 
-                    <ul class="payment-nav px-0 list-children-style-0 d-flex flex-justify-between align-items-center">
-                        <li class="pay-item">
-                            <!-- Card tab -->
-                            <div class="p-2 link text-center rounded">
-                                <img src="./assets/images/grey-card.png" class="tab-demog-img img-1" alt="">
-                                <img src="./assets/images/red-card.png" class="tab-demog-img img-2" alt="">
-                                <div class="tab-label">Card</div>
-                                <img src="./assets/images/tab-checked.png" class="checked-img" alt="">
-                            </div>
-                            <input type="radio" name="pay-option" value="card" class="pay-default-radio">
-                        </li>
-                        <li class="pay-item">
-                            <!-- USSD tab -->
-                            <div class="p-2 link text-center rounded">
-                                <img src="./assets/images/grey-ussd.png" class="tab-demog-img img-1" alt="">
-                                <img src="./assets/images/red-ussd.png" class="tab-demog-img img-2" alt="">
-                                <div class="tab-label">USSD</div>
-                                <img src="./assets/images/tab-checked.png" class="checked-img" alt="">
-                            </div>
-                            <input type="radio" name="pay-option" value="ussd" class="pay-default-radio">
-                        </li>
-                        <li class="pay-item">
-                            <!-- Direct debit tab -->
-                            <div class="p-2 link text-center rounded">
-                                <img src="./assets/images/grey-directDebit.png" class="tab-demog-img img-1" alt="">
-                                <img src="./assets/images/red-directDebit.png" class="tab-demog-img img-2" alt="">
-                                <div class="tab-label">Direct Debit</div>
-                                <img src="./assets/images/tab-checked.png" class="checked-img" alt="">
-                            </div>
-                            <input type="radio" name="pay-option" value="directDebit" class="pay-default-radio">
-                        </li>
-                        <li class="pay-item">
-                            <!-- QR Code tab -->
-                            <div class="p-2 link text-center rounded">
-                                <img src="./assets/images/grey-qr.png" class="tab-demog-img img-1" alt="">
-                                <img src="./assets/images/red-qr.png" class="tab-demog-img img-2" alt="">
-                                <div class="tab-label">QR Code</div>
-                                <img src="./assets/images/tab-checked.png" class="checked-img" alt="">
-                            </div>
-                            <input type="radio" name="pay-option" value="qrCode" class="pay-default-radio">
-                        </li>
-                        <li class="pay-item">
-                            <!-- Pay attitude tab -->
-                            <div class="p-2 link text-center rounded">
-                                <img src="./assets/images/grey-payAttitude.png" class="tab-demog-img img-1" alt="">
-                                <img src="./assets/images/red-payAttitude.png" class="tab-demog-img img-2" alt="">
-                                <div class="tab-label">Pay Attitude</div>
-                                <img src="./assets/images/tab-checked.png" class="checked-img" alt="">
-                            </div>
-                            <input type="radio" name="pay-option" value="payAttitude" class="pay-default-radio">
-                        </li>
-                    </ul>
+                <ul class="payment-nav px-0 list-children-style-0 d-flex flex-justify-between align-items-center">
+                    <li class="pay-item">
+                        <!-- Card tab -->
+                        <div class="p-2 link text-center rounded">
+                            <img src="./assets/images/grey-card.png" class="tab-demog-img img-1" alt="">
+                            <img src="./assets/images/red-card.png" class="tab-demog-img img-2" alt="">
+                            <div class="tab-label">Card</div>
+                            <img src="./assets/images/tab-checked.png" class="checked-img" alt="">
+                        </div>
+                        <input type="radio" name="pay-option" value="card" class="pay-default-radio">
+                    </li>
+                    <li class="pay-item">
+                        <!-- USSD tab -->
+                        <div class="p-2 link text-center rounded">
+                            <img src="./assets/images/grey-ussd.png" class="tab-demog-img img-1" alt="">
+                            <img src="./assets/images/red-ussd.png" class="tab-demog-img img-2" alt="">
+                            <div class="tab-label">USSD</div>
+                            <img src="./assets/images/tab-checked.png" class="checked-img" alt="">
+                        </div>
+                        <input type="radio" name="pay-option" value="ussd" class="pay-default-radio">
+                    </li>
+                    <li class="pay-item">
+                        <!-- Direct debit tab -->
+                        <div class="p-2 link text-center rounded">
+                            <img src="./assets/images/grey-directDebit.png" class="tab-demog-img img-1" alt="">
+                            <img src="./assets/images/red-directDebit.png" class="tab-demog-img img-2" alt="">
+                            <div class="tab-label">Direct Debit</div>
+                            <img src="./assets/images/tab-checked.png" class="checked-img" alt="">
+                        </div>
+                        <input type="radio" name="pay-option" value="directDebit" class="pay-default-radio">
+                    </li>
+                    <li class="pay-item">
+                        <!-- QR Code tab -->
+                        <div class="p-2 link text-center rounded">
+                            <img src="./assets/images/grey-qr.png" class="tab-demog-img img-1" alt="">
+                            <img src="./assets/images/red-qr.png" class="tab-demog-img img-2" alt="">
+                            <div class="tab-label">QR Code</div>
+                            <img src="./assets/images/tab-checked.png" class="checked-img" alt="">
+                        </div>
+                        <input type="radio" name="pay-option" value="qrCode" class="pay-default-radio">
+                    </li>
+                    <li class="pay-item">
+                        <!-- Pay attitude tab -->
+                        <div class="p-2 link text-center rounded">
+                            <img src="./assets/images/grey-payAttitude.png" class="tab-demog-img img-1" alt="">
+                            <img src="./assets/images/red-payAttitude.png" class="tab-demog-img img-2" alt="">
+                            <div class="tab-label">Pay Attitude</div>
+                            <img src="./assets/images/tab-checked.png" class="checked-img" alt="">
+                        </div>
+                        <input type="radio" name="pay-option" value="payAttitude" class="pay-default-radio">
+                    </li>
+                </ul>
 
 
-                    <div class="option-content">
-                        <div class="tab_content hide" id="card">
-                            <!-- Card Content -->
-                            <div class="cut_separator">
-                                <span>Enter your Card details</span>
-                            </div>
-                            <form action="#" class="mt-3">
-                                <!-- form content -->
-                                <div class="row">
-                                    <div class="col-12">
-                                        <div class="form_grp filled">
-                                            <label for="cNumber" class="sit">Card Number</label>
-                                            <input type="number" name="cNumber" id="cNumber" class="form_control">
-                                            <img src="./assets/images/mastercard-icon.png"
-                                                class="input-brand-icon img-fluid" alt="">
-                                        </div>
+                <div class="option-content">
+                    <div class="tab_content hide" id="card">
+                        <!-- Card Content -->
+                        <div class="cut_separator">
+                            <span>Enter your Card details</span>
+                        </div>
+                        <form action="#" class="mt-3">
+                            <!-- form content -->
+                            <div class="row">
+                                <div class="col-12">
+                                    <div class="form_grp filled">
+                                        <label for="cNumber" class="sit">Card Number</label>
+                                        <input type="number" name="cNumber" id="cNumber" class="form_control">
+                                        <img src="./assets/images/mastercard-icon.png" class="input-brand-icon img-fluid" alt="">
                                     </div>
                                 </div>
-                                <div class="row">
-                                    <div class="col-6">
-                                        <div class="form_grp filled">
-                                            <label for="validity" class="valid-till">Valid Till</label>
-                                            <input type="date" name="validity" id="validity" class="form_control">
-                                        </div>
-                                    </div>
-                                    <div class="col-6">
-                                        <div class="form_grp filled">
-                                            <label for="cvv" class="sit">CVV</label>
-                                            <input type="text" name="cvv" id="cvv" class="form_control"
-                                                pattern="[0-9]{1}" maxlength="3">
-                                        </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-6">
+                                    <div class="form_grp filled">
+                                        <label for="validity" class="valid-till">Valid Till</label>
+                                        <input type="date" name="validity" id="validity" class="form_control">
                                     </div>
                                 </div>
-                                <div class="row">
-                                    <div class="col text-center">
-                                        <button class="submit-btn rounded py-2" disabled>
+                                <div class="col-6">
+                                    <div class="form_grp filled">
+                                        <label for="cvv" class="sit">CVV</label>
+                                        <input type="text" name="cvv" id="cvv" class="form_control" pattern="[0-9]{1}" maxlength="3">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col text-center">
+                                    <button class="submit-btn rounded py-2" disabled>
                                             <span
                                                 class="text-capitalize">pay</span>&nbsp;<span>N</span><span>3,250.00</span>
                                         </button>
-                                    </div>
                                 </div>
-                                <!--  -->
-                            </form>
-                        </div>
-                        <div class="tab_content hide" id="ussd">
-                            <!-- USSD Content -->
-                            <div class="cut_separator">
-                                <span>Select your bank to pay with USSD</span>
                             </div>
-                            <form action="#" class="mt-3 ussd_form">
+                            <!--  -->
+                        </form>
+                    </div>
+                    <div class="tab_content hide" id="ussd">
+                        <!-- USSD Content -->
+                        <div class="cut_separator">
+                            <span>Select your bank to pay with USSD</span>
+                        </div>
+                        <form action="#" class="mt-3 ussd_form">
 
-                                <!-- form content -->
-                                <div class="row">
-                                    <div class="col-12 col-md-6">
-                                        <div class="form-input-wrapper valid mt-1 mb-2 px-2">
-                                            <select name="" id="" class="bank-selector w-100">
+                            <!-- form content -->
+                            <div class="row">
+                                <div class="col-12 col-md-6">
+                                    <div class="form-input-wrapper valid mt-1 mb-2 px-2">
+                                        <select name="" id="" class="bank-selector w-100">
                                                 <option value="uba">
                                                     <div>
                                                         <div>United Bank for Africa (UBA)</div>
@@ -170,207 +168,214 @@
                                                     </div>
                                                 </option>
                                             </select>
-                                        </div>
                                     </div>
                                 </div>
-                                <!--  -->
-                                <div class="cut_separator mb-1">
-                                    <span>Dial this code on your mobile device</span>
+                            </div>
+                            <!--  -->
+                            <div class="cut_separator mb-1">
+                                <span>Dial this code on your mobile device</span>
+                            </div>
+                            <div class="flex-juspb-alc my-3">
+                                <div>
+                                    <input type="text" name="bank-code" id="bankCode" value="*919*00*3250#" class="bank-code p-0 m-0" readonly>
                                 </div>
-                                <div class="flex-juspb-alc my-3">
-                                    <div>
-                                        <input type="text" name="bank-code" id="bankCode" value="*919*00*3250#"
-                                            class="bank-code p-0 m-0" readonly>
-                                    </div>
-                                    <button onclick="myFunction(); return false"
-                                        class="clipboard-btn btn-outline-0">Copy to
+                                <button onclick="myFunction(); return false" class="clipboard-btn btn-outline-0">Copy to
                                         clipboard</button>
-                                </div>
-                                <div class="row">
-                                    <div class="col text-center">
-                                        <button class="submit-btn rounded py-2 btn-outline-0" disabled>
+                            </div>
+                            <div class="row">
+                                <div class="col text-center">
+                                    <button class="submit-btn rounded py-2 btn-outline-0" disabled>
                                             Confirm Payment
                                         </button>
-                                    </div>
                                 </div>
-                            </form>
-                        </div>
-                        <div class="tab_content hide" id="directDebit">
-                            <!-- Direct debit Content -->
-                            <div class="cut_separator">
-                                <span>Enter your bank details</span>
                             </div>
-                            <form action="#" class="mt-3">
+                        </form>
+                    </div>
+                    <div class="tab_content hide" id="directDebit">
+                        <!-- Direct debit Content -->
+                        <div class="cut_separator">
+                            <span>Enter your bank details</span>
+                        </div>
+                        <form action="#" class="mt-3">
 
-                                <!-- form content -->
+                            <!-- form content -->
 
-                                <div class="row">
-                                    <div class="col-12 col-md-6">
-                                        <div class="form_grp filled">
-                                            <label for="accountNumber" class="sit">Account Number</label>
-                                            <input type="number" name="accountNumber" id="accountNumber"
-                                                class="form_control">
-                                        </div>
-                                    </div>
-                                    <div class="col-12 col-md-6">
-                                        <div class="form_grp filled">
-                                            <label for="bvn" class="sit">BVN Number</label>
-                                            <input type="number" name="bvn" id="bvn" class="form_control"
-                                                pattern="[0-9]{1}" maxlength="11">
-                                        </div>
+                            <div class="row">
+                                <div class="col-12 col-md-6">
+                                    <div class="form_grp filled">
+                                        <label for="accountNumber" class="sit">Account Number</label>
+                                        <input type="number" name="accountNumber" id="accountNumber" class="form_control">
                                     </div>
                                 </div>
-                                <div class="row">
-                                    <div class="col-12 col-md-6">
-                                        <div class="form_grp filled">
-                                            <label for="dob" class="dob">Date of Birth</label>
-                                            <input type="date" name="dob" id="dob" class="form_control">
-                                        </div>
-                                    </div>
-                                    <div class="col-12 col-md-6">
-                                        <div class="form_grp filled">
-                                            <label for="phoneF" class="sit">Phone Number</label>
-                                            <input type="text" name="phoneF" id="phoneF" class="form_control">
-                                        </div>
+                                <div class="col-12 col-md-6">
+                                    <div class="form_grp filled">
+                                        <label for="bvn" class="sit">BVN Number</label>
+                                        <input type="number" name="bvn" id="bvn" class="form_control" pattern="[0-9]{1}" maxlength="11">
                                     </div>
                                 </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-12 col-md-6">
+                                    <div class="form_grp filled">
+                                        <label for="dob" class="dob">Date of Birth</label>
+                                        <input type="date" name="dob" id="dob" class="form_control">
+                                    </div>
+                                </div>
+                                <div class="col-12 col-md-6">
+                                    <div class="form_grp filled">
+                                        <label for="phoneF" class="sit">Phone Number</label>
+                                        <input type="text" name="phoneF" id="phoneF" class="form_control">
+                                    </div>
+                                </div>
+                            </div>
 
-                                <div class="row">
-                                    <div class="col text-center">
-                                        <button class="submit-btn rounded py-2 btn-outline-0" disabled>
+                            <div class="row">
+                                <div class="col text-center">
+                                    <button class="submit-btn rounded py-2 btn-outline-0" disabled>
                                             <span
                                                 class="text-capitalize">pay</span>&nbsp;<span>N</span><span>3,250.00</span>
                                         </button>
+                                </div>
+                            </div>
+                            <!--  -->
+                        </form>
+                    </div>
+                    <div class="tab_content hide" id="qrCode">
+                        <!-- QR Code Content -->
+                        <div class="cut_separator">
+                            <span>Scan the QR code with your mobile phone</span>
+                        </div>
+                        <section>
+                            <div class="qr-wrapper">
+                                <div class=" qr-code-label">
+                                    <div class="qr-label-text">
+                                        Code will expire in
+                                    </div>
+                                    <div class="qr-label-timer">
+                                        <span id="min">04</span>:<span id="sec">80</span>&nbsp;<span>mins</span>
                                     </div>
                                 </div>
-                                <!--  -->
-                            </form>
-                        </div>
-                        <div class="tab_content hide" id="qrCode">
-                            <!-- QR Code Content -->
-                            <div class="cut_separator">
-                                <span>Scan the QR code with your mobile phone</span>
+                                <div class="qr-img-wrapper"><img src="./assets/images/qr-code-image.png" alt="">
+                                </div>
                             </div>
-                            <section>
-                                <div class="qr-wrapper">
-                                    <div class=" qr-code-label">
-                                        <div class="qr-label-text">
-                                            Code will expire in
+                        </section>
+                    </div>
+                    <div class="tab_content hide" id="payAttitude">
+                        <!-- Pay attitude Content -->
+                        <div class="cut_separator">
+                            <span>Enter your Phone Number</span>
+                        </div>
+                        <section>
+                            <form action="#" class="mt-3 pay-attitude-form">
+
+                                <!-- Form content -->
+
+                                <div class="row">
+                                    <div class="col-12 col-md-6">
+                                        <div class="form_grp filled">
+                                            <label for="phoneNumber" class="sit">Phone Number</label>
+                                            <input type="text" name="phoneNumber" id="phoneNumber" class="form_control pay-attitude-phone">
                                         </div>
-                                        <div class="qr-label-timer">
-                                            <span id="min">04</span>:<span id="sec">80</span>&nbsp;<span>mins</span>
-                                        </div>
-                                    </div>
-                                    <div class="qr-img-wrapper"><img src="./assets/images/qr-code-image.png" alt="">
                                     </div>
                                 </div>
-                            </section>
-                        </div>
-                        <div class="tab_content hide" id="payAttitude">
-                            <!-- Pay attitude Content -->
-                            <div class="cut_separator">
-                                <span>Enter your Phone Number</span>
-                            </div>
-                            <section>
-                                <form action="#" class="mt-3 pay-attitude-form">
-
-                                    <!-- Form content -->
-
-                                    <div class="row">
-                                        <div class="col-12 col-md-6">
-                                            <div class="form_grp filled">
-                                                <label for="phoneNumber" class="sit">Phone Number</label>
-                                                <input type="text" name="phoneNumber" id="phoneNumber"
-                                                    class="form_control pay-attitude-phone">
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="row">
-                                        <div class="col text-center">
-                                            <button class="submit-btn rounded py-2 btn-outline-0" type="button">
+                                <div class="row">
+                                    <div class="col text-center">
+                                        <button class="submit-btn rounded py-2 btn-outline-0" type="button">
                                                 <span
                                                     class="text-capitalize">pay</span>&nbsp;<span>N</span><span>3,250.00</span>
                                             </button>
-                                        </div>
                                     </div>
-                                    <!--  -->
+                                </div>
+                                <!--  -->
 
-                                </form>
-                            </section>
-                            <section class="transaction-pin-area hide">
-                                <h6 class="text-center mt-4">Enter your transaction PIN</h6>
+                            </form>
+                        </section>
+                        <section class="transaction-pin-area hide">
+                            <h6 class="text-center mt-4">Enter your transaction PIN</h6>
 
-                                <form name="otpForm">
-                                    <div class="text-center">
-                                        <div class="pin-input-wrapper">
-                                            <input type="text" pattern="[0-9]{1}" maxlength="1" class="otp-digit">
-                                            <input type="text" pattern="[0-9]{1}" maxlength="1" class="otp-digit">
-                                            <input type="text" pattern="[0-9]{1}" maxlength="1" class="otp-digit">
-                                            <input type="text" pattern="[0-9]{1}" maxlength="1" class="otp-digit">
-                                            <input type="text" pattern="[0-9]{1}" maxlength="1" class="otp-digit">
-                                            <input type="text" pattern="[0-9]{1}" maxlength="1" class="otp-digit">
-                                            <input type="text" pattern="[0-9]{1}" maxlength="1" class="otp-digit">
-                                        </div>
+                            <form name="otpForm">
+                                <div class="text-center">
+                                    <div class="pin-input-wrapper">
+                                        <input type="text" pattern="[0-9]{1}" maxlength="1" class="otp-digit">
+                                        <input type="text" pattern="[0-9]{1}" maxlength="1" class="otp-digit">
+                                        <input type="text" pattern="[0-9]{1}" maxlength="1" class="otp-digit">
+                                        <input type="text" pattern="[0-9]{1}" maxlength="1" class="otp-digit">
+                                        <input type="text" pattern="[0-9]{1}" maxlength="1" class="otp-digit">
+                                        <input type="text" pattern="[0-9]{1}" maxlength="1" class="otp-digit">
+                                        <input type="text" pattern="[0-9]{1}" maxlength="1" class="otp-digit">
+                                    </div>
 
-                                        <p class="mt-4 mb-2"><a href="#"
-                                                class="btn btn-default custom-text-danger fontweight-500 otp-link">Use
+                                    <p class="mt-4 mb-2"><a href="#" class="btn btn-default custom-text-danger fontweight-500 otp-link">Use
                                                 OTP
                                                 instead?</a></p>
 
-                                        <button type="button" class="submit-btn rounded py-2 btn-outline-0"
-                                            onclick="return false">
+                                    <button type="button" class="submit-btn rounded py-2 btn-outline-0" onclick="return false">
                                             Confirm
                                         </button>
-                                    </div>
-                                </form>
-                            </section>
-                        </div>
+                                </div>
+                            </form>
+                        </section>
                     </div>
                 </div>
             </div>
-
-
-            <!-- MODAL POP UP -->
-            <!-- /* overlay */ -->
-            <div class="overlay hide"></div>
-            <!-- /* success message */ -->
-            <div class="success-message-wrapper px-2 hide">
-
-                <div class="card">
-                    <div class="card-body">
-                        <div class="ring mb-2 hide">
-                            <div class="tick"></div>
-                        </div>
-                        <h4>Success!</h4>
-                        <p>Your item has been successfully purchased</p>
-                        <p>
-                            <a href="#" class="btn btn-default primary-color">View Receipt</a>
-                            <!-- not sure how this will function -->
-                        </p>
-                        <a href="#" class="btn btn-default primary-color">Back</a>
-                        <!-- This link/button is meant to close the modal pop up.
-                            But i believe it's suppose to return a user to another page on the application, that's why it is made to be a link -->
-                    </div>
-                </div>
-
-            </div>
-
-            <footer class="text-center m-2">Instant Bills Pay powered by UBA</footer>
         </div>
+
+
+        <!-- MODAL POP UP -->
+        <!-- /* overlay */ -->
+        <div class="overlay hide"></div>
+        <!-- /* success message */ -->
+        <div class="success-message-wrapper px-2 hide">
+            <div class="card">
+                <div class="card-body">
+                    <div class="ring mb-2 hide">
+                        <div class="tick"></div>
+                    </div>
+                    <h4>Success!</h4>
+                    <p>Your item has been successfully purchased</p>
+                    <p>
+                        <a href="#" class="btn btn-default primary-color">View Receipt</a>
+                        <!-- not sure how this will function -->
+                    </p>
+                    <a href="#" class="btn btn-default primary-color">Back</a>
+                    <!-- This link/button is meant to close the modal pop up.
+                            But i believe it's suppose to return a user to another page on the application, that's why it is made to be a link -->
+                </div>
+            </div>
+
+        </div>
+        <!--  -->
+        <div class="ussd-message-wrapper px-2 hide">
+
+            <div class="wrapper">
+                <div class="inner">
+                    <div class="left">
+                        <h6 class="title text-center bold">PAY WITH</h6>
+                        <div class="option">USSD</div>
+                    </div>
+                    <div class="right">
+                        <div class="info-card">
+                            <p>
+                                <span class="heading">Transaction Amount:&nbsp;<span class="amount">N 2000.00</span></span>
+                                <br/><br/>Please dial <span class="code">*919*000*3184#</span> on your phone to complete Transaction<br/><br/> Payment timeout in <span class="countdown bold-600">01:18</span> minutes
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+        <footer class="text-center m-2">Instant Bills Pay powered by UBA</footer>
+    </div>
     </div>
 
     <!-- jquery cdn -->
     <script src="https://code.jquery.com/jquery-3.5.0.min.js"></script>
     <!-- bootstrap 4.3.1 js -->
-    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
-        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
-        crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
-        integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
-        crossorigin="anonymous"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
-        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
-        crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
     <!-- custom js -->
     <script src="./js/main.jquery.js"></script>
     <script src="./js/main.js"></script>

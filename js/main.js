@@ -31,9 +31,9 @@ window.addEventListener('load', (event) => {
     if (event.target.readyState === "complete") {
         for (let i = 0; i < payItemTab.length; i++) {
             /* toggle title based on the number of available payment options */
-            if(payItemTab.length===1){
+            if (payItemTab.length === 1) {
                 const dynText = document.querySelector(".dynText");
-                if(!dynText.classList.contains("hide")){
+                if (!dynText.classList.contains("hide")) {
                     dynText.classList.add("hide");
                 }
             }
@@ -93,8 +93,7 @@ const triggerActive = (arg) => {
                 }
             }
             /* */
-        }
-        else {
+        } else {
             sibling.classList.remove("active");
         }
     }
@@ -115,3 +114,13 @@ function handleSuccessModal() {
         }
     }, 800)
 }
+
+
+
+// /* USSD modal */
+// function handleUssdModal(){
+//     const ussdModalWrapper = document.querySelector(".ussd-message-wrapper");
+//     const overlay = document.querySelector(".overlay");
+//     ussdModalWrapper.classList.remove("hide")
+//         overlay.classList.remove("hide")
+// }
