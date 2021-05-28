@@ -15,7 +15,7 @@
 <body>
     <div class="pg-wrapper" id="ussd-payment-page">
         <div class="content-wrapper">
-            <div class="card mx-3 mt-5 custom-bg-danger h-100">
+            <div class="card mx-3 mt-5 custom-bg-danger">
                 <div class="card-header border-0 text-white">
                     <div class="flex-justify-between">
                         <span>
@@ -40,6 +40,68 @@
                 </div>
             </div>
             <div class="card-body bottom-container bg-white">
+                <!-- title -->
+                <div class="cut_separator">
+                    <span>
+                <span class="dynText">Select&nbsp;</span>
+                    <span class="dynText2">payment</span> option
+                    </span>
+                </div>
+
+                <!-- tabs -->
+
+                <ul class="payment-nav px-0 list-children-style-0 d-flex flex-justify-between align-items-center">
+                    <li class="pay-item-alt">
+                        <!-- Card tab -->
+                        <div class="p-2 link text-center rounded">
+                            <img src="../assets/images/grey-card.png" class="tab-demog-img img-1" alt="" />
+                            <img src="../assets/images/red-card.png" class="tab-demog-img img-2" alt="" />
+                            <div class="tab-label">Card</div>
+                            <img src="../assets/images/tab-checked.png" class="checked-img" alt="" />
+                        </div>
+                        <input type="radio" name="pay-option" value="card" class="pay-default-radio" />
+                    </li>
+                    <li class="pay-item-alt active">
+                        <!-- USSD tab -->
+                        <div class="p-2 link text-center rounded shadow">
+                            <img src="../assets/images/grey-ussd.png" class="tab-demog-img img-1" alt="" />
+                            <img src="../assets/images/red-ussd.png" class="tab-demog-img img-2" alt="" />
+                            <div class="tab-label">USSD</div>
+                            <img src="../assets/images/tab-checked.png" class="checked-img" alt="" />
+                        </div>
+                        <input type="radio" name="pay-option" value="ussd" class="pay-default-radio" />
+                    </li>
+                    <li class="pay-item-alt">
+                        <!-- Direct debit tab -->
+                        <div class="p-2 link text-center rounded">
+                            <img src="../assets/images/grey-directDebit.png" class="tab-demog-img img-1" alt="" />
+                            <img src="../assets/images/red-directDebit.png" class="tab-demog-img img-2" alt="" />
+                            <div class="tab-label">Direct Debit</div>
+                            <img src="../assets/images/tab-checked.png" class="checked-img" alt="" />
+                        </div>
+                        <input type="radio" name="pay-option" value="directDebit" class="pay-default-radio" />
+                    </li>
+                    <li class="pay-item-alt">
+                        <!-- QR Code tab -->
+                        <div class="p-2 link text-center rounded">
+                            <img src="../assets/images/grey-qr.png" class="tab-demog-img img-1" alt="" />
+                            <img src="../assets/images/red-qr.png" class="tab-demog-img img-2" alt="" />
+                            <div class="tab-label">QR Code</div>
+                            <img src="../assets/images/tab-checked.png" class="checked-img" alt="" />
+                        </div>
+                        <input type="radio" name="pay-option" value="qrCode" class="pay-default-radio" />
+                    </li>
+                    <li class="pay-item-alt">
+                        <!-- Pay attitude tab -->
+                        <div class="p-2 link text-center rounded">
+                            <img src="../assets/images/grey-payAttitude.png" class="tab-demog-img img-1" alt="" />
+                            <img src="../assets/images/red-payAttitude.png" class="tab-demog-img img-2" alt="" />
+                            <div class="tab-label">Pay Attitude</div>
+                            <img src="../assets/images/tab-checked.png" class="checked-img" alt="" />
+                        </div>
+                        <input type="radio" name="pay-option" value="payAttitude" class="pay-default-radio" />
+                    </li>
+                </ul>
 
                 <div class="option-content">
                     <div class="tab_content">
@@ -52,7 +114,7 @@
                                 </span>
                                 <br />
                                 <br /> Please dial
-                                <span class="code">*919*000*3184#</span> on your phone to complete Transaction
+                                <span class="code bold-600">*919*000*3184#</span> on your phone to complete Transaction
                                 <br />
                                 <br /> Payment timeout in
                                 <span class="countdown bold-600">01:18</span> minutes
