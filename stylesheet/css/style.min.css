@@ -345,6 +345,10 @@ select.custom-select:-ms-input-placeholder {
 #ussd-payment-page .custom-bg-danger {
   min-height: 400px;
 }
+#ussd-payment-page .info-card {
+  margin-top: 3em;
+  margin-bottom: 2em;
+}
 #ussd-payment-page .info-card .heading {
   font-size: 1.3rem;
 }
