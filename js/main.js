@@ -33,8 +33,10 @@ window.addEventListener('load', (event) => {
             /* toggle title based on the number of available payment options */
             if (payItemTab.length === 1) {
                 const dynText = document.querySelector(".dynText");
-                if (!dynText.classList.contains("hide")) {
-                    dynText.classList.add("hide");
+                if (dynText) {
+                    if (!dynText.classList.contains("hide")) {
+                        dynText.classList.add("hide");
+                    }
                 }
             }
             /* */

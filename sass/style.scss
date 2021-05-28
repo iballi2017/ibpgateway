@@ -206,6 +206,30 @@
     }
 }
 
+
+/* USSD payment page */
+
+#ussd-payment-page {
+    .custom-bg-danger {
+        min-height: 400px;
+    }
+    .info-card {
+        .heading {
+            font-size: 1.3rem;
+        }
+        .code {
+            font-size: 1.4rem;
+            color: #FF0000;
+        }
+        .amount {
+            font-weight: 600;
+            white-space: nowrap;
+        }
+        // .countdown{
+        // }
+    }
+}
+
 .flex-juspb-alc {
     display: flex;
     justify-content: space-between;

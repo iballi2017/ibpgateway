@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>USSD payment option</title>
+    <!-- bootstrap 4.3.1 css -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous" />
+    <!-- stylesheet update -->
+    <link rel="stylesheet" href="../stylesheet/css/style.min.css" />
+</head>
+
+<body>
+    <div class="pg-wrapper" id="ussd-payment-page">
+        <div class="content-wrapper">
+            <div class="card mx-3 mt-5 custom-bg-danger h-100">
+                <div class="card-header border-0 text-white">
+                    <div class="flex-justify-between">
+                        <span>
+                <button
+                  class="back-history-arrow text-white"
+                  onclick="goBack(); return false"
+                >
+                  <i class="fas fa-arrow-left"></i>
+                </button>
+              </span>
+
+                        <span>
+                <div class="user-email">
+                  Damilolaadeleke@gmail.com
+                </div>
+                <div class="font-size-m">
+                  <span class="text-capitalize">pay</span> &nbsp;
+                        <span>N</span>
+                        <span>3,250.00</span>
+                    </div>
+                    </span>
+                </div>
+            </div>
+            <div class="card-body bottom-container bg-white">
+
+                <div class="option-content">
+                    <div class="tab_content">
+
+                        <div class="info-card">
+                            <p>
+                                <span class="heading">
+                      Transaction Amount:&nbsp;
+                      <span class="amount">N 2000.00</span>
+                                </span>
+                                <br />
+                                <br /> Please dial
+                                <span class="code">*919*000*3184#</span> on your phone to complete Transaction
+                                <br />
+                                <br /> Payment timeout in
+                                <span class="countdown bold-600">01:18</span> minutes
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <footer class="text-center m-2">
+            Instant Bills Pay powered by UBA
+        </footer>
+    </div>
+    </div>
+
+    <!-- jquery cdn -->
+    <script src="https://code.jquery.com/jquery-3.5.0.min.js"></script>
+    <!-- bootstrap 4.3.1 js -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+    <!-- custom js -->
+    <script src="../js/main.jquery.js"></script>
+    <script src="../js/main.js"></script>
+</body>
+
+</html>

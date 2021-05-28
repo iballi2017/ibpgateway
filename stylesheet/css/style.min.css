@@ -333,6 +333,22 @@ select.custom-select:-ms-input-placeholder {
   justify-content: center;
 }
 
+/* USSD payment page */
+#ussd-payment-page .custom-bg-danger {
+  min-height: 400px;
+}
+#ussd-payment-page .info-card .heading {
+  font-size: 1.3rem;
+}
+#ussd-payment-page .info-card .code {
+  font-size: 1.4rem;
+  color: #FF0000;
+}
+#ussd-payment-page .info-card .amount {
+  font-weight: 600;
+  white-space: nowrap;
+}
+
 .flex-juspb-alc {
   display: flex;
   justify-content: space-between;
